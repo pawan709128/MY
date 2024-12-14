@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+    "use strict";
+    var username = prompt("Enter Your Name");
+    var role = prompt("Enter Your Role", "Admin|User");
+    class Product
+    {
+         _productName;
+
+         get ProductName(){
+            return this._productName;
+         }
+
+         set ProductName(newName) {
+            if(role==="Admin") {
+                this._productName = newName;
+            } else {
+                document.write(`Hello ! ${username} - You are not authorized to set product name`);
+            }
+         }
+    }
+    let obj = new Product();
+    obj.ProductName() = prompt("Enter New Product Name");
+    if(obj.ProductName) {
+        document.write(`Product Name : ${obj.ProductName}`);
+    }
+</script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

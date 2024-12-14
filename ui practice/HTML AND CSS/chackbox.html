@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chackbox</title>
+  <style>
+    .input_checkbox:checked+span{
+      color: green;
+    }
+    .input_checkbox~button{
+      display: none;
+    }
+    .input_checkbox:checked~button{
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <input type="checkbox" name="" id="" class="input_checkbox"> <span>I Acapt</span>
+  <button>Submit</button>
+</body>
+</html>

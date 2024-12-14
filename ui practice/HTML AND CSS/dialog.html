@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog Example</title>
+</head>
+<body>
+    <!-- Dialog Element -->
+    <dialog id="myDialog">
+        <h2>Dialog Title</h2>
+        <p>This is a dialog box.</p>
+        <button id="closeDialog">Close</button>
+    </dialog>
+
+    <!-- Button to open the dialog -->
+    <button id="openDialog">Open Dialog</button>
+
+    <script>
+        // Get the dialog element
+        const dialog = document.getElementById('myDialog');
+
+        // Get the open and close buttons
+        const openDialogButton = document.getElementById('openDialog');
+        const closeDialogButton = document.getElementById('closeDialog');
+
+        // Event listener to open the dialog
+        openDialogButton.addEventListener('click', () => {
+            dialog.showModal(); // or use dialog.show() for a non-modal dialog
+        });
+
+        // Event listener to close the dialog
+        closeDialogButton.addEventListener('click', () => {
+            dialog.close();
+        });
+    </script>
+</body>
+</html>

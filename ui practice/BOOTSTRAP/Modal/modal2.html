@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<style>
+    .email:valid{
+        border: 2px solid green;
+    }
+    .email:invalid{
+        border: 2px solid red;
+    }
+</style>
+</head>
+<body>
+    <section class="container-fluid mt-2" >
+        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#login" >Sing up</button>
+        <div class="modal" id="login">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1>Registration Form</h1>
+                        <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                        
+                    </div>
+                    <div class="modal-body">
+                        <form action="">
+                            <div class="my2">
+                                <label for="name" class="form-lable">Name</label>
+                                <input type="text" name="name" class="form-control" placeholder="Enter your name.." required>
+                            </div>
+                            <div class="my-2">
+                                <label for="email" class="form-label">Email Id.</label>
+                                <input type="email" class="form-control email" placeholder="abc88@gmail.com" pattern="d\[a-z1-9]+@gmail\.com" title="Please enter a valid Gmail address." required>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+<!-- Classes: -->
+    <!-- 
+    .modal
+    .modal-dialog
+    .modal-content
+    .modal-header
+    .modal-body
+    .modal-footer
+    .modal-dialog-centered
+    .modal-fullscreen
+    .modal-dialog-scrollable
+    Attributes:
+    data-bs-dismiss       : to close
+    data-bs-toggle        : It defines component to open on click
+    data-bs-target        : It defines which component to open.
+                            It refers to "id" of component. -->

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>header</title>
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body>
+  <div class="header w-100">
+    <header class="d-flex bg-black p-2 container-md justify-content-between">
+      <div>
+        <button class="btn btn-dark bi bi-menu-app mx-4" data-bs-toggle="offcanvas" data-bs-target="#menu"></button>
+        <span class="h3 text-light">Simlye.</span>
+      </div>
+      <div>
+        <div class="container-fluid">
+          <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#loginform">Login</button>
+  
+          <div class="modal fade" id="loginform">
+            <div class="modal-dialog modal-fullscreen">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3>User Login</h3>
+                  <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                  <section class="vh-100 " style="background-color: #5a494d;">
+                    <div class="container py-5 h-100">
+                      <div class="row d-flex justify-content-center align-items-center h-100">
+                        <div class="col col-xl-10">
+                          <div class="card" style="border-radius: 1rem;">
+                            <div class="row g-0">
+                              <div class="col-md-6 col-lg-5 d-none d-md-block">
+                                <img src="/public/Images/coding-girl.jpg" alt="login form" class="img-fluid h-100"
+                                  style="border-radius: 1rem 0 0 1rem;" />
+                              </div>
+                              <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                                <div class="card-body p-4 p-lg-5 text-black">
+                                  <form>
+                                    <div class="d-flex align-items-center mb-3 pb-1">
+                                      <i class="bi bi-cube-fill fa-2x me-3" style="color: #ff6219;"></i>
+                                      <span class="h1 fw-bold mb-0">Simlye.</span>
+                                    </div>
+                                    <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
+                                    <div class="form-outline mb-4">
+                                      <input type="email" id="form2Example17" class="form-control form-control-lg" />
+                                      <label class="form-label" for="form2Example17">Email address</label>
+                                    </div>
+                                    <div class="form-outline mb-4">
+                                      <input type="password" id="form2Example27" class="form-control form-control-lg" />
+                                      <label class="form-label" for="form2Example27">Password</label>
+                                    </div>
+                                    <div class="pt-1 mb-4">
+                                      <button class="btn btn-dark btn-lg btn-block" type="button">Login</button>
+                                    </div>
+                                    <a class="small text-muted" href="#!">Forgot password?</a>
+                                    <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account?
+                                      <a href="#!" style="color: #393f81;">Register here</a></p>
+                                    <a href="#!" class="small text-muted">Terms of use.</a>
+                                    <a href="#!" class="small text-muted">Privacy policy</a>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  
+    <section class="container-fluid ">
+      <div class="offcanvas offcanvas-start bg-black" id="menu">
+        <div class="offcanvas-header">
+          <div class="h3">Simlye.</div>
+          <button class="btn btn-close bg-primary" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          <nav>
+            <ul class="list-unstyled gap-3 bg">
+              <li><a class="text-decoration-none h5 text-light" href="#Home"><i class="bi bi-house-fill"></i> Home</a></li>
+              <li><a class="text-decoration-none h5 text-light" href="#About"><i class="bi bi-person-fill"></i> About</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-decoration-none h5 text-light" href="#" id="coursesDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <i class="bi bi-book-fill"></i> <span class="text-decoration-none h5 text-light">Courses</span>
+                </a>
+                <ul class="dropdown-menu bg-black" aria-labelledby="coursesDropdown">
+                  <li><a class="dropdown-item  text-decoration-none h5 text-primary" href="#Web_Developer">Full Stack Web Developer</a></li>
+                  <li><a class="dropdown-item text-decoration-none h5 text-primary" href="#Java">Java</a></li>
+                  <li><a class="dropdown-item text-decoration-none h5 text-primary" href="#Python">Python</a></li>
+                  <li><a class="dropdown-item text-decoration-none h5 text-primary" href="#Net">.NET</a></li>
+                </ul>
+              </li>
+              <li><a href="#Contact" class="text-decoration-none h5 text-light"><i class="bi bi-messenger"></i> Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+</body>
+</html>

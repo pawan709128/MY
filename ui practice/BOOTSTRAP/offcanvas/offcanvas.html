@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offcanvas</title>
+  <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body>
+  <header class="w-100 p-3 bg-black d-flex justify-content-between">
+    <div class="h3 text-light">Simly.</div>
+    <div>
+      <button class="btn btn-dark text-light bi bi-menu-button-wide" 
+              data-bs-target="#manu" data-bs-toggle="offcanvas"></button>
+    </div>
+  </header>
+  
+  <!-- <section class="container-fluid w-100">
+    <div class="offcanvas offcanvas-start bg-black" id="manu">
+      <div class="offcanvas-header">
+        <h2 class="text-light">Simly.</h2>
+        <button class="btn btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div><button class="btn bi bi-house-fill text-light"> Home</button></div>
+        <div><button class="btn bi bi-person-fill text-light"> Contact</button></div>
+        <div><button class="btn bi bi-gear-fill text-light"> Settings</button></div>
+        <div><button class="btn bi bi-info-circle-fill text-light"> About</button></div>
+      </div>
+    </div>
+  </section> -->
+  <section class="container-fluid w-100" >
+    <div class="offcanvas bg-black offcanvas-start" id="manu">
+      <div class="offcanvas-header">
+        <div class="h4 text-light">Simly.</div>
+        <button class="btn btn-close text-bg-light" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body h5">
+        <div>
+        <button class="btn bi bi-house-fill text-light"> Home</button></div>
+        <div><button class="btn bi bi-person-fill text-light"> Contact</button></div>
+        <div><button class="btn bi bi-gear-fill text-light"> Settings</button></div>
+        <div><button class="btn bi bi-info-circle-fill text-light"> About</button></div>
+    </div>
+
+  </section>
+</body>
+</html>
+
+<!-- 
+.offcanvas: Base class for offcanvas.
+.offcanvas-header, .offcanvas-body: Used to structure the header and content of the offcanvas.
+.offcanvas-start, .offcanvas-end, .offcanvas-top, .offcanvas-bottom: Control the position of the offcanvas panel.
+Attributes:
+
+data-bs-target: Specifies the element to be toggled.
+data-bs-toggle: Triggers the offcanvas display.
+data-bs-dismiss: Closes the offcanvas. -->

@@ -1,0 +1,23 @@
+.mymenu {
+  color: black;
+  background-color: #f5f5f5;
+ 
+}
+
+
+.mymenu li {
+ list-style-type: none;
+ display: flex;
+ align-items: center;
+ padding: 10px;
+
+}
+
+.mymenu a {
+  color: black;
+  text-decoration: none;
+}
+
+.mymenu a:hover {
+  color: rgba(0, 0, 0, 0.392);
+}

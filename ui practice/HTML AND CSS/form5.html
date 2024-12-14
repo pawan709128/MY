@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body{
+      width: 100%;
+      background-image: url(/bg\ \(2\).gif);
+      background-position:center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: white;
+    }
+    section {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    main {
+      width: 30%;
+      padding: 5px;
+      border-radius: 10px;
+      box-shadow: 1px 1px 10px black;
+    }
+    label{
+      font-size: 17px;
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 5px;
+    }
+
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    input {
+      padding: 5px;
+      border-radius: 5px;
+      width: 100%;
+     
+    }
+
+    .form_title {
+      width: 100%;
+      font-size: large;
+      font-weight: 700;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-top: 5px;
+      margin-bottom: 20px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    p {
+      width: 90%;
+      text-align: justify;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 5px;
+    }
+
+    .bottun {
+      width: 100%;
+      height: 5vh;
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+    }
+
+    button {
+      width: 90%;
+      background-color: green;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      border: unset;
+    }
+
+ 
+
+    .form_label {
+      width: 90%;
+      padding-left: 6%;
+    }
+
+    .form_input {
+      width: 90%;
+      margin-top: 5px;
+      padding-left: 6%;
+
+    }
+
+    .name:invalid+p {
+      display: block;
+      color: red;
+    }
+
+    .name:valid+p {
+      display: none;
+    }
+
+    .name:required {
+      border: 2px solid red;
+    }
+
+    .mobile:valid+p {
+      display: none;
+    }
+
+    .mobile:invalid+p {
+      display: block;
+      color: red;
+    }
+
+    .mobile:required {
+      border: 2px solid red;
+    }
+
+    .email:required {
+      border: 2px solid red;
+    }
+
+    .email:valid+p {
+      display: none;
+    }
+
+    .email:invalid+p {
+      display: block;
+      color: red;
+    }
+
+    .age:in-range+p {
+      display: none;
+    }
+
+    .age:out-of-range+p {
+      display: block;
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <main>
+      <form action="" method="get">
+        <div class="form_title">Registration Form</div>
+
+        <!-- Name Field -->
+        <div class="form_group">
+          <div class="form_label">
+            <label for="name">Enter Your Name:</label>
+          </div>
+          <div class="form_input">
+            <input type="text" pattern="[A-Z]+" name="name" minlength="4" maxlength="20" class="name" required>
+            <p>Enter your name (4 to 20 uppercase letters only).</p>
+          </div>
+        </div>
+
+        <!-- Father's Name Field -->
+        <div class="form_group">
+          <div class="form_label">
+            <label for="father_name">Enter Your Father's Name:</label>
+          </div>
+          <div class="form_input">
+            <input type="text" pattern="[A-Z]+" name="father_name" minlength="4" maxlength="20" class="name" required>
+            <p>Enter your father's name (4 to 20 uppercase letters only).</p>
+          </div>
+        </div>
+
+        <!-- Mobile Number Field -->
+        <div class="form_group">
+          <div class="form_label"><label for="mobile">Mobile Number:</label></div>
+          <div class="form_input">
+            <input type="text" pattern="\+91[6-9]\d{9}" name="mobile" class="mobile" required maxlength="13"
+              value="+91">
+            <p>Enter a valid mobile number starting with +91 followed by 10 digits.</p>
+          </div>
+        </div>
+
+        <!-- Email Field -->
+        <div class="form_group">
+          <div class="form_label"><label for="email">Email ID:</label></div>
+          <div class="form_input">
+            <input type="email" required name="email" class="email"
+              pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Please enter a valid email address"
+              placeholder="Enter your email" class="email">
+            <p>Please Enteer Velid Email</p>
+          </div>
+        </div>
+
+        <!-- Age Field -->
+        <div class="form_group">
+          <div class="form_label"><label for="age">Your Age:</label></div>
+          <div class="form_input">
+            <input type="number" class="age" min="18" max="25" name="age">
+            <p>Age must be between 18 to 25.</p>
+          </div>
+          <div class="bottun">
+            <button type="submit">Submit</button>
+          </div>
+        </div>
+        </div>
+
+      </form>
+    </main>
+  </section>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+/* src/
+├── components/
+│   ├── Header.js
+│   ├── Footer.js
+│   ├── ProductCard.js
+│   └── ...
+├── pages/
+│   ├── HomePage.js
+│   ├── ProductPage.js
+│   ├── CartPage.js
+│   └── ...
+├── redux/
+│   ├── store.js
+│   ├── actions.js
+│   └── reducers.js
+├── App.js
+├── index.js
+└── ... */

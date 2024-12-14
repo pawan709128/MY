@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .checkbox:checked+label{
+      color: green;
+    }
+    .checkbox~button{
+      display: none;
+    }
+    .checkbox:checked~button{
+      display: block;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+  <!-- Use <script> for JavaScript files -->
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body>
+  <section class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <form action="" method="get" class="border-1 border-black w-25 p-3">
+      <div class="h2 text-center">Register Form</div>  
+
+      <!-- Name Field with Pattern for Alphabetical Characters -->
+      <div class="my-2">
+        <label for="name" class="form-label">Name:</label>
+        <input type="text" name="name" class="form-control" id="name" pattern="[A-Za-z ]+" title="Only alphabetic characters and spaces are allowed" required>
+      </div>
+
+      <!-- Email Field (No Pattern Needed Since it's Handled by HTML5) -->
+      <div class="mb-2">
+        <label for="email" class="email">Email Id:</label>
+        <input type="email" name="email" class="form-control" required>
+      </div>
+
+      <!-- Mobile Field with Pattern for 10 Digits -->
+      <div class="mb-2">
+        <label for="mobile" class="form-label">Mobile:</label>
+        <input type="text" name="mobile" class="form-control" pattern="^\d{10}$" title="Mobile number must be 10 digits" required>
+      </div> 
+
+      <!-- Price Range Input -->
+      <div class="mb-2">
+        <label for="price" class="form-label">Price:</label>
+        <input type="range" name="price" class="form-range" min="0" max="100" required>
+      </div> 
+
+      <!-- City Selection Dropdown -->
+      <div class="mb-2">
+        <label for="city" class="form-label">City:</label>
+        <select class="form-select" name="city" required>
+          <option value="">Select City</option>
+          <option value="Patna">Patna</option>
+          <option value="Gaya">Gaya</option>
+          <option value="Aurangabad">Aurangabad</option>
+        </select>
+      </div> 
+      <div class="mb-2">
+        <input type="checkbox" class="form-check checkbox"><label for="">I Accept</label>
+         <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary mt-3 w-100">Submit</button>
+      </div>
+    </form>
+  </section>
+</body>
+</html>

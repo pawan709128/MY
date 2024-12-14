@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accorodion</title>
+  <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+</body>
+</html>
+<!-- Classes:
+    .accordion
+    .accordion-item
+    .accordion-header
+    .accordion-body
+    .accordion-button
+    .accordion-collapse
+
+Attributes:
+    data-bs-toggle
+    data-bs-target
+    data-bs-parent  [It is defined for collapse to configure mutex]
+                 [All collapse must use the same parent] -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accordion</title>
+</head>
+<body>
+  <section class="container-fluid">
+    <div class="accordion" id="ac">
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#d1">What is Program?</button>
+        </div>
+        <div class="accordion-collapse collapse" id="d1" data-bs-parent="#ac">
+        <div class="accordion-body">
+          <p>Program is satp by satp prosesing  </p>
+        </div>
+        </div>
+      </div>
+      <!-- accordion item2 -->
+       <div class="accordion-item">
+        <div class="accordion-header">
+          <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#d2" >lorem</button>
+        </div>
+        <div class="accordion-collapse collapse" id="d2" data-bs-parent="#ac">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint error velit provident doloremque enim pariatur cum excepturi, obcaecati at voluptas tenetur eum neque repudiandae asperiores non laboriosam? Doloribus, repellat at?</p>
+        </div>
+       </div>
+       <!-- accordion item3 -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#d3">lorem2</button>
+          </div> 
+          <div class="accordion-collapse collapse" id="d3" data-bs-parent="#ac">
+            <div class="accordion-body" >
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel cum labore neque et laboriosam fuga, totam cumque quae. Assumenda quis quisquam corrupti, aperiam fugit itaque. Repudiandae ea quos obcaecati nulla.
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+</body>
+</html>

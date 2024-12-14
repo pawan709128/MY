@@ -1,0 +1,15 @@
+button {
+  background-color: lightblue;
+}
+
+button:hover {
+  background-color: darkblue; /* On hover */
+}
+
+button:focus {
+  outline: 2px solid orange; /* On focus */
+}
+
+button:active {
+  background-color: red; /* When clicked/pressed */
+}

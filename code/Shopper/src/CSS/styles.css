@@ -1,0 +1,201 @@
+/* Global Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header Styling */
+header {
+    display: grid;
+    grid-template-columns: 2fr 6fr 4fr;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+/* Brand Title */
+.brand-title button {
+    display: none;
+}
+.brand-title {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 30px; 
+    font-weight: 900;  
+    padding: 4px;
+}
+
+/* Navigation Menu */
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; /* Changed from 1cm to rem for consistency */
+    list-style: none;
+}
+nav ul li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+    transition: color 0.3s ease; /* Smooth transition on hover */
+}
+a:hover {
+    color: #ff9800; /* Hover effect for links */
+}
+
+/* Header Icons */
+.header-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem; /* Changed gap to rem */
+    padding-top: 10px;
+    font-weight: 500;
+}
+.header-icons span {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.header-icons span:hover {
+    color: #ff9800; /* Hover effect for icons */
+}
+
+/* Announcement Bar */
+article {
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Main Section */
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 80vh;
+}
+.main_man, .main_woman, .main_child {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    margin-top: 2px;
+    position: relative;
+}
+.main_child {
+    background-image: url(/public/images/child.jpg);
+}
+.main_man {
+    background-image: url(/public/images/man.jpg);
+}
+.main_woman {
+    background-image: url(/public/images/woman.jpg);
+}
+
+/* Main Overlay */
+.main_man div, .main_woman div, .main_child div {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Slightly darker overlay */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+.main_man div:hover, .main_woman div:hover, .main_child div:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Main Section Buttons */
+.main_btntext {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main_title {
+    font-size: 32px;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 10px;
+}
+.main_btntext button {
+    padding: 12px 24px;
+    border: none;
+    background-color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.main_btntext button:hover {
+    background-color: #ff9800;
+    color: white;
+}
+
+/* Template Section */
+.template2 {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+.template2_content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+.card {
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.card-text {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Media Queries */
+@media screen and (max-width: 808px) {
+    /* Header Restructure */
+    header {
+        grid-template-columns: 12fr;
+    }
+    .brand-title {
+        display: flex;
+        justify-content: space-between;
+    }
+    .header-icons, nav {
+        display: none;
+    }
+    .brand-title button {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }  
+
+    /* Main Section Restructure */
+    main {
+        grid-template-columns: 1fr;
+    } 
+    .main_man, .main_child {
+        display: none;
+    }
+    .template2_content{
+        grid-template-columns: 12fr ;
+    }
+}

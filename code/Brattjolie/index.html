@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Example</title>
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --white-color: #ffffff;
+            --light-gray: #f8f9fa;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--light-gray);
+        }
+
+        .nav-link {
+            width: 30%;
+            height: 10vh;
+            display: block;
+            position: relative;
+            padding: 10px 15px;
+            margin-right: 10px;
+            background-color: var(--white-color);
+            border: unset;
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: background-color 250ms ease-in-out;
+            border-right: 1px solid #d1d3d4;
+            border-bottom: 1px solid #d1d3d4;
+            text-align: center;
+            padding-top: 5%;
+        }
+
+        .nav-link:hover {
+            background-color: var(--light-gray);
+        }
+
+        .nav-link:focus {
+            border-color:rgb(241, 199, 39);
+            outline: none; /* Remove the default focus outline */
+        }
+
+        .nav-link::after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            width: 29px;
+            height: 29px;
+            background: unset;
+            text-indent: -9999px;
+            border-top: 2px solid transparent;
+            border-left: 2px solid  transparent;
+            transition: all 250ms ease-in-out;
+            text-decoration: none;
+            color: transparent;
+            top: 50%;
+            right: -16px;
+            transform: translate(0, -50%) rotate(135deg);
+        }
+
+        .nav-link:focus::after {
+                border-top-color: rgb(241, 199, 39); /* Change to your desired color */
+                border-left-color: rgb(241, 199, 39);
+                background: var(--white-color); /* Optional: adjust background */
+        }
+       
+    </style>
+</head>
+<body>
+<a href="#" class="nav-link ">Tab 2</a>
+
+</body>
+</html>

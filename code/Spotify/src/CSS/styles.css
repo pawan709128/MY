@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body {
+    background-color: rgb(18, 18, 18);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    padding: 1rem;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #181818;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.search-bar {
+    border-radius: 30px;
+    background-color: #181818;
+}
+
+.form-control {
+    background-color: #181818;
+    color: white;
+    border: none;
+}
+
+.btn-secondary {
+    background-color: #181818;
+    border: none;
+}
+
+.nav-buttons a {
+    color: white;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.btn-login {
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+}
+
+.card {
+    background-color: #1a1a1a;
+    border: none;
+    border-radius: 10px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+}
+
+.card_img {
+    border-radius: 80px;
+    height: 150px;
+    width: 150px;
+}
+
+.main {
+    height: 80vh;
+    overflow-y: scroll;
+}
+
+.text-white a {
+    color: #aaaaaa;
+    text-decoration: none;
+}
+
+.text-white a:hover {
+    color: #ffffff;
+}
+
+.btn-light {
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 20px;
+    padding: 5px 20px;
+}
+
+.btn-outline-light {
+    border-radius: 20px;
+    padding: 5px 20px;
+}
+
+/* Add responsive styles for artist cards */
+@media (max-width: 768px) {
+    .col-md-2 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .main {
+        height: 40vh;
+        overflow: scroll;
+    }
+}
+
+@media (max-width: 576px) {
+    .col-md-2 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .main {
+        height: auto;
+    }
+}
+
+.card-header {
+    height: 155px;
+    text-align: center;
+    position: relative;
+}
+
+.btn-play {
+    bottom: 10px;
+    right: 20px;
+}
+
+/* input::placeholder {
+    color: #ffffff;
+    opacity: 1;
+}
+
+input:-ms-input-placeholder {
+    color: red;
+}
+
+
+input:-moz-placeholder {
+    color: red;
+    opacity: 1;
+} */
+
+input::placeholder {
+    color: rgb(110, 108, 108) !important;
+    opacity: 1 !important;
+}
+input:focus{
+    background-color:rgb(23, 23, 23) !important;
+    border: none !important;
+    outline: unset !important;
+}
+.card_img + .play_btn1 {
+    bottom: 1px;
+    right: 2px;
+    display: none;
+}
+
+.card_img + :hover .play_btn1 {
+    display: block;
+}

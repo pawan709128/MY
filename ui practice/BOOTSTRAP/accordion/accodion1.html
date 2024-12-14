@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="accordion" id="accordionid">
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#menu1">HTML</button>
+                </div>
+                <div class="collapse accordion-collapse" id="menu1" data-bs-parent="#accordionid">
+                    <div class="accordion-body">
+                        <p>HTML stands for Hypertext Markup Language, and it's the code used to structure web pages and their content. HTML is the basic building block of the web and defines the meaning and structure of web content.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <button class="accordion-button active" data-bs-toggle="collapse" data-bs-target="#menu2">CSS</button>
+                </div>
+                <div class="accordion-collapse collapse show" id="menu2" data-bs-parent="#accordionid">
+                    <div class="accordion-body">
+                        <p>CSS is the language we use to style a Web page.</p>
+                    </div>
+                </div>
+            </div>
+                
+        </div>
+    </div>
+</body>
+</html>

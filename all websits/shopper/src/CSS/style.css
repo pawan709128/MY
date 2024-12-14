@@ -1,0 +1,193 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  font-family: Segoe UI;
+  align-items: baseline;
+  padding: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.header_logo {
+  font-size: 20px;
+  font-weight: 700;
+  
+}
+header span{
+  margin-left: 10px;
+  margin-right: 20px;
+}
+header div{
+  display: flex;
+}
+
+header .bi{
+  font-size: 20px;
+  margin-left: 10px;
+}
+ /* main*/
+article .bi-lightning-charge-fill{
+  color: goldenrod;
+}
+.article_title{
+  font-size: 20px;
+  font-weight: 600;
+}
+   article{
+    text-align: center;
+    font-weight:600 ;
+    padding:10px ;
+    background: black;
+    color: white;
+   }
+   main{
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr;
+   }
+   .women_image_main{
+    background-image: url(../../public/images/woman-tam.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 620px;
+    opacity: .5;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+   }
+
+   .men_image_main{
+    background-image: url(../../public/images/man-tam.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 620px;
+    opacity: .5;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+   }
+
+   .child_image_main{
+    background-image: url(../../public/images/child-tem.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 620px;
+    opacity: .5;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+   }
+   .women_image_main:hover {
+    opacity: 1; 
+}
+.men_image_main:hover {
+  opacity: 1; 
+}
+.child_image_main:hover {
+  opacity: 1; 
+}
+.main_bar_title{
+  font-size: 30px;
+  color: white;
+  font-weight:600 ;
+  text-shadow: 3px 3px 8px black;
+}
+.main_bar_button{
+  width: 30%;
+  background-color: #fff;
+  text-align: center;
+  padding: 15px;
+  border-radius: 5px;
+  font-weight: 600;
+}
+/* footer */
+
+footer{
+  color: white;
+  width: 100%;
+  background-image:url(../../public/images/footer_background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: border-box;
+  background-color: rgba(0, 0, 0, 0.848);
+  padding-top: 70px;
+  opacity: .8;
+}
+.footer{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+padding: 15px;
+margin-top: 50px;
+margin-bottom: 40px;
+}
+.footer_section{
+display: flex;
+color: white;
+gap: 70px;
+}
+.search_footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.footer_input_Subscribe input,button{
+  height: 6vh;
+  padding: 10px;
+  margin: 5px;
+  background-color: rgba(0, 0, 0, 0.253);
+  color: white;
+  border: 1px solid black;
+}
+.footer_input_Subscribe button,input{
+  border-radius: 5px;
+  
+} 
+.footer_input_Subscribe input{
+  width: 250px;
+
+}
+.footer_logo{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: center;
+}
+.footer_section h3{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+.footer_logo div{
+  display: flex;
+  gap: 10px;
+  padding: 5px;
+  color: rgba(190, 194, 198, 0.637);
+}
+    
+.footer_copy_image{
+  width: 100%;
+  border-top: 2px solid rgb(154, 150, 150);
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+.footer_copy{
+  color: rgba(163, 165, 167, 0.833);
+  padding: 5px;
+}
+.footer_image img{
+  width: 80px;
+  height: 40px;
+  padding: 5px;
+}

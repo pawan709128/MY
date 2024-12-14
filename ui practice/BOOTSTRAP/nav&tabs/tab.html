@@ -1,0 +1,117 @@
+<!-- .nav
+.nav-tabs
+.nav-pills
+.nav-item
+.nav-menu
+.nav-link
+.nav-text
+
+- Tab is defined by using the classes
+
+.tab-content
+.tab-pane
+
+Attributes:
+data-bs-target
+data-bs-toggle -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <title>Nav&tab</title>
+</head>
+
+<body>
+    <section class="container-fluid">
+        <h1>Mobile</h1>
+        <ul class="nav nav-tabs">
+            <li class="nav-item"><a href="#basicDetails" data-bs-toggle="tab" class="nav-link active">Basic Details</a>
+            </li>
+            <li class="nav-item"><a href="#Preview" data-bs-toggle="tab" class="nav-link">Preview</a></li>
+            <li class="nav-item"><a href="#Offers" data-bs-toggle="tab" class="nav-link">Offers</a></li>
+            <li class="nav-item"><a href="#Ratings" data-bs-toggle="tab" class="nav-link">Ratings</a></li>
+        </ul>
+        <div class="tab-content mt-4">
+            <div class="tab-pane active" id="basicDetails">
+                <h3>iPhone 14 Black (128 GB)</h3>
+                <h5>&#8377; 69,000</h5>
+            </div>
+            <div class="tab-pane mt-4" id="Preview">
+                <img src="./src/image/182485-OWWNXM-95.jpg" alt="" height="500">
+                <img src="./src/image/3179230.jpg" alt="" height="500">
+                <img src="./src/image/355473-PAZLZL-516.jpg" alt="" height="500">
+            </div>
+            <div class="tab-pane" id="Offers">
+                <ul>
+                    <li>Bank Offer5% Unlimited Cashback on Flipkart Axis Bank Credit CardT&C </li>
+                    <li>Special PriceGet extra ₹4901 off (price inclusive of cashback/coupon)T&C</li>
+                    <li>Partner OfferMake a purchase and enjoy a surprise cashback/ coupon that you can redeem later!
+                    </li>
+                </ul>
+
+            </div>
+            <div class="tab-pane" id="Ratings">
+                <li class="dropdown-divider"></li>
+                <li class="dropdown-item"> <a> <span class="bi bi-question-circle dropdown-item-text"> Help </span> </a>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid">
+        <h1>Couse</h1>
+       
+        <ul class="nav nav-tabs">
+            <li class="nav-item"><a data-bs-toggle="tab" href="#ui" class="nav-link active">Ui Full Stack</a></li>
+            <li class="nav-item"><a  data-bs-toggle="tab" href="tab" class="nav-link">Java Full Stack</a></li>
+            <li class="nav-item"><a data-bs-toggle="tab" href="tab" class="nav-link">.NET Full Stack</a></li>
+            <li class="nav-item"><a data-bs-toggle="tab" href="tab" class="nav-link">Python Full Stack</a></li>
+        </ul>
+      <div class="tab tab-content">
+        <div class="tab-pane" id="ui">
+            <div class="container-fluid my-2" >
+                <div class="accordion" id="accord">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <button data-bs-toggle="collapse" data-bs-target="#topic1" class="accordion-button">Html</button>
+                        </div>
+                        <div class="accordion-collapse collapse" id="topic1" data-bs-parent="#accord">
+                            <p>  Learn the basics of HTML to build the structure of web pages.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <button data-bs-toggle="collapse" data-bs-target="#topic1" class="accordion-button">CSS</button>
+                        </div>
+                        <div class="accordion-collapse collapse" id="topic1" data-bs-parent="#accord">
+                            <p>Style your web pages with CSS for layout, color, and design.</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        
+       
+      </div>
+    </section>
+</body>
+
+</html>
+<dd></dd>
+<dt class="my-1 h3 bg-danger">Bootstrap</dt>
+<dd>Learn responsive web design with the Bootstrap framework.</dd>
+<dt class="my-1 h3 bg-danger">Javascript</dt>
+<dd>Learn JavaScript to make your web pages interactive and dynamic.</dd>
+<dt class="my-1 h3 bg-danger">React</dt>
+<dd>Build dynamic web applications using the React framework.</dd>
+<dt class="my-1 h3 bg-danger">Node.js</dt>
+<dd>Master server-side JavaScript with Node.js to build scalable applications.</dd>
+<dt class="my-1 h3 bg-danger">Express.js</dt>
+<dd>Learn Express.js to create robust and scalable backend applications.</dd>
+<dt class="my-1 h3 bg-danger">MongoDB</dt>
+<dd>Learn NoSQL database development with MongoDB.</dd>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <header class="navbar navbar-expand-lg justify-content-between" data-bs-theme="light">
+        <div class="container-fluid">
+          
+            <a href="/" class="navbar-brand ms-4" style="margin-right: 30%;">Shopper</a>
+            
+        
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-4">
+                    <li class="nav-item"><a href="/" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="/catalog" class="nav-link">Catalog</a></li>
+                    <li class="nav-item"><a href="/shop" class="nav-link">Shop</a></li>
+                    <li class="nav-item"><a href="/pages" class="nav-link">Pages</a></li>
+                    <li class="nav-item"><a href="/blog" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="/docs" class="nav-link">Docs</a></li>
+                </ul>
+    
+                
+                <ul class="navbar-nav ms-auto p-5 d-flex flex-row">
+                    <li class="nav-item"><a href="/search" class="nav-link" aria-label="Search"><i class="bi bi-search"></i></a></li>
+                    <li class="nav-item"><a href="/profile" class="nav-link" aria-label="Profile"><i class="bi bi-person"></i></a></li>
+                    <li class="nav-item"><a href="/favorites" class="nav-link" aria-label="Favorites"><i class="bi bi-heart"></i></a></li>
+                    <li class="nav-item ">
+                        <button class="btn position-relative btn-light bi bi-cart"><div class="badge bg-danger position-absolute  rounded rounded-circle " style="top:-5px;">4</div> </button>
+                            
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+
+    
+    
+</body>
+</html>

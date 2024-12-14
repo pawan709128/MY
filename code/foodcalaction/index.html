@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feane</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/CSS/style.css">
+  
+        
+</head>
+<body>
+  <section class="container-fluid header1">
+    <header class="header w-100">
+      <nav class="navbar navbar-expand-lg text-white">
+        <a class="navbar-brand header_a" href="#">Feane</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item active">
+              <a class="nav-link header_a" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link header_a" href="#">Menu</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle header_a" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Book Table
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item header_a" href="#">Couple</a></li>
+                <li><a class="dropdown-item header_a" href="#">Business</a></li>
+                <li><a class="dropdown-item header_a" href="#">Family</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item header_a" href="#">Normal</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link header_a" href="#">About</a>
+            </li>
+          </ul>
+          <form class="d-flex justify-content-center align-items-center">
+            <a class="bi bi-person-fill mx-2 header_a"></a>
+            <a class="bi bi-cart-fill mx-2 header_a"></a>
+            <a class="bi bi-search mx-2 header_a"></a>
+            <button class="btn order_onlin" type="submit">Order Online</button>
+          </form>
+        </div>
+      </nav>
+    </header>
+    <article>
+      <div id="foodCarousel" class="carousel slide w-50" data-bs-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators d-flex justify-content-around w-25">
+          <li data-bs-target="#foodCarousel" data-bs-slide-to="0" class="active"></li>
+          <li data-bs-target="#foodCarousel" data-bs-slide-to="1"></li>
+          <li data-bs-target="#foodCarousel" data-bs-slide-to="2"></li>
+        </ol>
+      
+        <!-- Carousel Items -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="carousel-caption">
+              <h1>Fast Food Restaurant</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <a href="#" class="btn btn-lg">Order Now</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-caption">
+              <h1>Fast Food Restaurant</h1>
+              <p> Doloremque, itaque aperiam facilis rerum, temporibus sapiente.</p>
+              <a href="#" class="btn btn-lg">Order Now</a>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#foodCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#foodCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      
+    </article>
+  </section>
+</body>
+</html>

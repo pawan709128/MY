@@ -1,0 +1,88 @@
+/* Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Section Style */
+.section1 {
+  width: 100%;
+  position: relative;
+}
+article{
+  position: absolute;
+}
+main{
+  position: absolute;
+  margin-top:50vh;
+  
+}
+article img {
+  width: 100%;
+}
+
+
+/* Main Cart Grid Layout */
+.main_cart {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr;
+  gap: 5px;
+  margin-top: 20px;
+  
+}
+
+/* Card Style */
+.card {
+  box-shadow: 2px 2px 5px black;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: white;
+  width: 95%;
+  margin-left: 2.5%;
+}
+
+/* Card Header Style */
+.card_header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Card Row Style */
+.card-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Card Image Style */
+.card-row img {
+  width: 130px;
+  height: 90px;
+  object-fit: cover;
+}
+
+/* Card Footer Style */
+.card_footer {
+  margin-top: 5px;
+  text-align: center;
+  color: blue;
+  cursor: pointer;
+}
+.smoll_cart{
+  width: 100%;
+
+}
+.smoll_cart{
+  width: 100vh;
+  background-color: white;
+  padding: 10px;
+}
+.smoll_cart span img{
+  width: 80px;
+  height: 130px;
+  margin: 5px;
+}
+ 
+

@@ -1,0 +1,435 @@
+header{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  background-color: rgba(252, 251, 251,.9);
+}
+.logo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+.logo img{
+  width: 50%;
+  align-items: center;
+}
+.header_link ul{
+  list-style: none;
+  display: flex;
+  width: 100%;
+  justify-content:space-around;
+ 
+}
+.header_link ul li{
+  
+  padding: 1%;
+}
+.header_link ul li a{
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.289);
+
+}
+section{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+
+}
+article{
+  width: 80%;
+  height: 100vh;
+  background-color: #d9d8d6;
+  margin-top:5%;
+  border-radius: 5px;
+  position: relative;
+
+}
+article img{
+  height: 100vh;
+  width: 100%;
+  margin-left: 10%;
+}
+.article_img{
+position: absolute;
+}
+.article_text{
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+  position: absolute;
+  top: 20%;
+  left: 5%;
+}
+
+.article_text1{
+  color: #ce9498;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 30px;
+  text-align: justify;
+  overflow: hidden;
+}
+.article_text2{
+  color: white;
+  font-size: 39px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: justify;
+  overflow: hidden;
+}
+.article_text3{
+  color: white;
+  font-size: 20px;
+  text-align: justify;
+  overflow: hidden;
+}
+.article_text button{
+  padding: 15px;
+  background-color: #cb7575;
+  color: white;
+  border-radius: 5px;
+  border: unset;
+}
+.article_text_right{
+  position: relative;
+  
+}
+
+.article_text_right1{
+  position: absolute;
+  right: 2%;
+  bottom: 12%;
+  text-align: center;
+  color: white;
+  background-color: #ff5500;
+  width: 30%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.article_text_right2{
+  position: absolute;
+  right: 2%;
+  bottom: 0%;
+  text-align: center;
+  background-color: white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 30%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/* Love_Story */
+.bi-heart-fill{
+  color: #ff5500;
+}
+.Love_Story{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: #f4cd37;
+  font-size: 40px;
+}
+.fieldset_section{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.fieldset_section fieldset{
+  width: 20%;
+  border-bottom: none;
+  border-right-style: none;
+  border-left-style: none;
+  border-top: 8px solid #e9eaeb;
+}
+.fieldset_section fieldset legend{
+  text-align: center;
+  font-size: 40px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.Love_Story_card{
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+}
+
+
+.Love_Story_card0_img img{
+  width: 90%;
+  height: 45vh;
+  padding: 5px;
+  border-radius: 10px;
+  
+}
+.Love_Story_card0{
+  width: 40%;
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+  gap: 1%;
+}
+
+.Love_Story_card0_text1 p {
+  font-size: 20px;
+  line-height: 4vh;
+  font-style: initial;
+  overflow: hidden;
+  text-align: justify;
+  font-style:inherit;
+}
+.Love_Story_card0_text1 p span{
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.Love_Story_card0_links span {
+  margin-left: 5%;
+  padding: 3%;
+  border-radius: 30px;
+  background-color: #f4cd37;
+}
+/* The_Wedding */
+.The_Wedding{
+  width: 100%;
+  background-color: #f9f9f9; 
+  height:90vh ;
+  margin-top:20px ;
+}
+.card_section{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+}
+.card{
+  margin: .5%;
+  padding: 1%;
+  width: 25%;
+}
+
+.card_img img{
+  width: 100%;
+  height: 25vh;
+  border-radius: 10px;
+}
+.card_text .title{
+  font-size: 25px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: initial;
+}
+.card_text p{
+  text-align: justify;
+  overflow: hidden;
+}
+.Groomsmen_Bridesmaid{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Groomsmen_Bridesmaid .Groomsmen_Bridesmaid_card{
+  display: flex;
+  width: 50%;
+  gap: 5%;
+}
+.Groomsmen_Bridesmaid_card_img{
+width: 100%;
+}
+.Groomsmen_Bridesmaid_card_img img{
+  width: 100%;
+  height: 25vh;
+  border-radius: 10px;
+}
+.Groomsmen_Bridesmaid_card_text{
+  width: 100%;
+}
+.Groomsmen_Bridesmaid_card_text .text{
+  width: 100%;
+  height: 25vh;
+  overflow: hidden;
+  text-align: justify;
+  
+}
+.Groomsmen_Bridesmaid_card_text .title span{
+  font-size: 25px;
+}
+.Gallery{
+  width: 100%;
+  height: 140vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:#f9f9f9 ;
+  gap: 2%;
+}
+.Gallery0{
+  display: flex;
+  gap: 2%;
+}
+.Gallery_img1 img{
+  width: 100%;
+  height: 51vh;
+  border-radius: 10px;
+  
+}
+.Gallery_img2 img{
+  
+  width: 100%;
+  height: 25vh;
+  border-radius: 10px;
+  padding: 1%;
+  display: block;
+}
+.Rsvp{
+  width: 100%;
+  height:80vh ;
+  background-image: url(/public/images/closeup-shot-newlywed-couple-sitting-bench.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: .8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* General Layout */
+.rsvp-section {
+  width: 100%;
+  height: 80vh;
+  background-image: url(/public/images/closeup-shot-newlywed-couple-sitting-bench.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rsvp-form {
+  background-color: white;
+  width: 40%;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.rsvp-section input {
+  width: 30%;
+  padding: 2%;
+  margin-bottom: 5%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  display: inline;
+}
+.rsvp-section textarea {
+  width: 95%;
+  padding: 2%;
+  margin-bottom: 5%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.rsvp-section select {
+  width: 30%;
+  padding: 2%;
+  margin-bottom: 5%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  display: inline;
+}
+
+.rsvp-section button {
+  text-align: center;
+  width: 100%;
+  background-color: #f08a5d;
+  color: white;
+  padding: 3%;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.rsvp-section button:hover {
+  background-color: #b83b5e;
+}
+footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+
+}
+.footer-section {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  margin-left: 10%;
+  gap: 5%;
+}
+.footer-section p{
+  text-align: justify;
+  overflow: hidden;
+}
+.footer-section .title{
+  font-size: 25px;
+}
+address ul{
+  list-style: none;
+}
+address li{
+  padding: 2%;
+}
+address a{
+  text-decoration: none;
+}
+.social-links a{
+  margin: 2%;
+  padding: 2%;
+  background-color: rgb(232, 215, 29);
+  border-radius: 20px;
+  color: black;
+}
+.bratt-jolie{
+  width: 100%;
+  height: 50vh;
+  background-image: url(/public/images/young-asian-pregnant-couple-using-laptop.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+.bratt-jolie2{
+  width: 100%;
+  height: 50vh;
+  background-color: rgba(255, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bratt-jolie2 img{
+  width: 100px;
+}
+@media screen and (max-width: 768px) {
+ 
+  .footer-section {
+      flex-direction: column;
+      align-items: center;
+  }
+} 

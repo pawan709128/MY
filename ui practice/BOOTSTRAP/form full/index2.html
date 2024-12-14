@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <style>
+    section {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    main {
+      width: 20%;
+      padding: 5px;
+      border-radius: 10px;
+      box-shadow: 1px 1px 10px black;
+    }
+
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    input {
+      padding: 5px;
+      border-radius: 5px;
+      width: auto;
+    }
+
+    .form_title {
+      width: 100%;
+      font-size: large;
+      font-weight: 700;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    p {
+      width: 70%;
+    }
+
+    .form_group {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    .form_label {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      width: 100%;
+    }
+
+    .form_input {
+      width: 100%;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    .name:invalid + p,
+    .father_name:invalid + p,
+    .mobile:invalid + p,
+    .email:invalid + p,
+    .age:out-of-range + p {
+      display: block;
+      color: red;
+    }
+
+    .name:valid + p,
+    .father_name:valid + p,
+    .mobile:valid + p,
+    .email:valid + p,
+    .age:in-range + p {
+      display: none;
+    }
+
+    .name:required, .mobile:required, .email:required {
+      border: 2px solid red;
+    }
+
+    .checkbox:checked + label {
+      color: green;
+    }
+
+    .checkbox ~ button {
+      display: none;
+    }
+
+    .checkbox:checked ~ button {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <main>
+      <form id="registrationForm" onsubmit="return validateForm()" method="get">
+        <div class="form_title">Registration Form</div>
+
+        <!-- Name Field -->
+        <div class="form_group">
+          <div class="form_label">
+            <label for="name">Enter Your Name:</label>
+          </div>
+          <div class="form_input">
+            <input type="text" id="name" pattern="[A-Z]+" minlength="4" maxlength="20" class="name" required>
+            <p>Enter your name (4 to 20 uppercase letters only).</p>
+          </div>
+        </div>
+
+        <!-- Father's Name Field -->
+        <div class="form_group">
+          <div class="form_label">
+            <label for="father_name">Enter Your Father's Name:</label>
+          </div>
+          <div class="form_input">
+            <input type="text" id="father_name" pattern="[A-Z]+" minlength="4" maxlength="20" class="father_name" required>
+            <p>Enter your father's name (4 to 20 uppercase letters only).</p>
+          </div>
+        </div>
+
+        <!-- Mobile Number Field -->
+        <div class="form_group">
+          <div class="form_label"><label for="mobile">Mobile Number:</label></div>
+          <div class="form_input">
+            <input type="text" id="mobile" pattern="\+91[6-9]\d{9}" maxlength="13" class="mobile" required value="+91">
+            <p>Enter a valid mobile number starting with +91 followed by 10 digits.</p>
+          </div>
+        </div>
+
+        <!-- Email Field -->
+        <div class="form_group">
+          <div class="form_label"><label for="email">Email ID:</label></div>
+          <div class="form_input">
+            <input type="email" id="email" class="email" required placeholder="Enter your email">
+            <p>Please enter a valid email.</p>
+          </div>
+        </div>
+
+        <!-- Age Field -->
+        <div class="form_group">
+          <div class="form_label"><label for="age">Your Age:</label></div>
+          <div class="form_input">
+            <input type="number" id="age" class="age" min="18" max="25" required>
+            <p>Age must be between 18 to 25.</p>
+          </div>
+        </div>
+
+        <!-- Checkbox Field -->
+        <div class="form_group">
+          <input type="checkbox" id="termsCheckbox" name="accept_terms" class="checkbox" required>
+          <label for="termsCheckbox">I Accept the Terms and Conditions</label>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form_group">
+          <div class="form_input">
+            <button type="submit">Submit</button>
+          </div>
+        </div>
+      </form>
+    </main>
+  </section>
+
+  <script>
+    function validateForm() {
+      const name = document.getElementById('name').value;
+      const fatherName = document.getElementById('father_name').value;
+      const mobile = document.getElementById('mobile').value;
+      const email = document.getElementById('email').value;
+      const age = document.getElementById('age').value;
+      const termsCheckbox = document.getElementById('termsCheckbox').checked;
+
+      const namePattern = /^[A-Z]{4,20}$/;
+      const mobilePattern = /^\+91[6-9]\d{9}$/;
+      const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+      // Name Validation
+      if (!namePattern.test(name)) {
+        alert('Name must contain 4 to 20 uppercase letters.');
+        return false;
+      }
+
+      // Father's Name Validation
+      if (!namePattern.test(fatherName)) {
+        alert("Father's name must contain 4 to 20 uppercase letters.");
+        return false;
+      }
+
+      // Mobile Number Validation
+      if (!mobilePattern.test(mobile)) {
+        alert('Mobile number must start with +91 and contain 10 digits.');
+        return false;
+      }
+
+      // Email Validation
+      if (!emailPattern.test(email)) {
+        alert('Please enter a valid email.');
+        return false;
+      }
+
+      // Age Validation
+      if (age < 18 || age > 25) {
+        alert('Age must be between 18 and 25.');
+        return false;
+      }
+
+      // Checkbox Validation
+      if (!termsCheckbox) {
+        alert('You must accept the terms and conditions.');
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+</body>
+</html>

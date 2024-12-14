@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dholak Drum</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .dholak {
+            width: 150px;
+            height: 100px;
+            background: linear-gradient(135deg, #8B4513, #A0522D);
+            border-radius: 50px;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            animation: shake 0.1s ease infinite;
+            animation-play-state: paused;
+            cursor: pointer;
+        }
+
+        .drum-head {
+            position: absolute;
+            width: 30px;
+            height: 70px;
+            background-color: #333;
+            border-radius: 50%;
+            top: 15px;
+        }
+
+        .drum-head.left {
+            left: -15px;
+        }
+
+        .drum-head.right {
+            right: -15px;
+        }
+
+        .line {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #333;
+        }
+
+        .line:nth-child(1) { top: 20%; }
+        .line:nth-child(2) { top: 40%; }
+        .line:nth-child(3) { top: 60%; }
+        .line:nth-child(4) { top: 80%; }
+
+        .play-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .play-button:focus {
+            outline: none;
+        }
+
+        @keyframes shake {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(2deg); }
+            50% { transform: rotate(0deg); }
+            75% { transform: rotate(-2deg); }
+            100% { transform: rotate(0deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="dholak" id="dholak" onclick="playDholak()">
+            <div class="drum-head left"></div>
+            <div class="drum-head right"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <button class="play-button" onclick="togglePlay()">Play Dholak</button>
+    </div>
+
+    <!-- Add the audio file -->
+    <audio id="dholak-sound" src="drum-sound.mp3"></audio>
+
+    <script>
+        const dholak = document.getElementById('dholak');
+        const audio = document.getElementById('dholak-sound');
+        let isPlaying = false;
+        let beatInterval;
+
+        // Function to play the sound once
+        function playDholak() {
+            audio.currentTime = 0; // Reset audio to the start
+            audio.play();
+            dholak.style.animationPlayState = 'running';
+            setTimeout(() => dholak.style.animationPlayState = 'paused', 100);
+        }
+
+        // Toggle play/pause for continuous beats
+        function togglePlay() {
+            if (isPlaying) {
+                clearInterval(beatInterval);
+                document.querySelector('.play-button').innerText = 'Play Dholak';
+            } else {
+                beatInterval = setInterval(playDholak, 500); // Play sound every 500ms
+                document.querySelector('.play-button').innerText = 'Pause Dholak';
+            }
+            isPlaying = !isPlaying;
+        }
+    </script>
+</body>
+</html>

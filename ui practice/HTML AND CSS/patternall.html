@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Input Field Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            padding: 20px;
+        }
+        h2 {
+            color: #2a9d8f;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #2a9d8f;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #21867a;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Test Regular Expressions with Input Fields</h1>
+    
+    <form id="regexForm">
+        <h2>? (Zero or one occurrence)</h2>
+        <label for="qInput">Enter a word to match (Example: "color" or "colour"):</label>
+        <input type="text" id="qInput" placeholder="colou?r" pattern="colou?r">
+
+        <h2>* (Zero or more occurrences)</h2>
+        <label for="starInput">Enter a word (Example: "color", "colour", or "colouuuuur"):</label>
+        <input type="text" id="starInput" placeholder="colou*r" pattern="colou*r">
+
+        <h2>+ (One or more occurrences)</h2>
+        <label for="plusInput">Enter a word (Example: "colour", "colouuur"):</label>
+        <input type="text" id="plusInput" placeholder="colou+r" pattern="colou+r">
+
+        <h2>. (Dot) (Any single character)</h2>
+        <label for="dotInput">Enter a 3-character word ending in "at" (Example: "cat", "bat"):</label>
+        <input type="text" id="dotInput" placeholder=".at" pattern=".at">
+
+        <h2>| (Pipe) (Logical OR)</h2>
+        <label for="orInput">Enter "red", "green", or "blue":</label>
+        <input type="text" id="orInput" placeholder="red|green|blue" pattern="red|green|blue">
+
+        <h2>\ (Escape sequence)</h2>
+        <label for="escapeInput">Enter a number with country code (Example: "+91"):</label>
+        <input type="text" id="escapeInput" placeholder="\+91" pattern="\+91\s?\d{10}">
+
+        <h2>[] (Character set)</h2>
+        <label for="setInput">Enter a character from the set [a,d,s,4,7,$,&]:</label>
+        <input type="text" id="setInput" placeholder="[a,d,s,4,7,$,&]" pattern="[a,d,s,4,7,$,&]">
+
+        <h2>() (Grouping)</h2>
+        <label for="groupingInput">Enter a string with at least one uppercase letter:</label>
+        <input type="text" id="groupingInput" placeholder="([A-Z]@[a-z])" pattern="([A-Z]@[a-z])">
+
+        <h2>\d (Digit)</h2>
+        <label for="digitInput">Enter two digits (Example: "44", "13"):</label>
+        <input type="text" id="digitInput" placeholder="\d\d" pattern="\d\d">
+
+        <h2>\D (Non-digit)</h2>
+        <label for="nonDigitInput">Enter a digit followed by a non-digit (Example: "3A", "2@"):</label>
+        <input type="text" id="nonDigitInput" placeholder="\d\D" pattern="\d\D">
+
+        <h2>\w (Word character)</h2>
+        <label for="wordCharInput">Enter a word character (A-Z, a-z, 0-9, _):</label>
+        <input type="text" id="wordCharInput" placeholder="\w" pattern="\w">
+
+        <h2>\W (Non-word character)</h2>
+        <label for="nonWordCharInput">Enter a digit followed by a special character (Example: "3$A"):</label>
+        <input type="text" id="nonWordCharInput" placeholder="\d\W\D" pattern="\d\W\D">
+
+        <h2>\s (Whitespace)</h2>
+        <label for="whitespaceInput">Enter two digits separated by a space (Example: "2 5"):</label>
+        <input type="text" id="whitespaceInput" placeholder="\d\s\d" pattern="\d\s\d">
+
+        <h2>[^] (Negation/exclude)</h2>
+        <label for="negateInput">Enter any character except [a-dA-D4-9]:</label>
+        <input type="text" id="negateInput" placeholder="[^a-dA-D4-9]" pattern="[^a-dA-D4-9]">
+
+        <h2>^ (Starts with)</h2>
+        <label for="startsWithInput">Enter a string that starts with "abc":</label>
+        <input type="text" id="startsWithInput" placeholder="^abc" pattern="^abc">
+
+        <h2>$ (Ends with)</h2>
+        <label for="endsWithInput">Enter a string that ends with "abc":</label>
+        <input type="text" id="endsWithInput" placeholder="abc$" pattern="abc$">
+
+        <h2>\i (Ignore case)</h2>
+        <label for="ignoreCaseInput">Enter "chars" (ignoring case sensitivity):</label>
+        <input type="text" id="ignoreCaseInput" placeholder="chars" pattern=" chars\i">
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>

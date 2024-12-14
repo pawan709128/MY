@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media</title>
+</head>
+<body>
+    <!-- 1. Lazy Loading for Images and Iframes
+Lazy loading delays the loading of media files (like images and iframes) until they are needed (i.e., when the user scrolls to them). This can significantly improve page loading time.
+
+Images: -->
+
+
+<img src="image.jpg" alt="Description" loading="lazy">
+<!-- Iframes (e.g., for YouTube): -->
+
+
+<iframe src="https://www.youtube.com/embed/6BGmX2W6ano?si=a94U7wnYePuyuer3" poster="poster="/HTML AND CSS/bg (2).gif"" loading="lazy" frameborder="0" allowfullscreen poster=""></iframe>
+<!-- 2. Use srcset for Responsive Images
+The srcset attribute allows browsers to choose the best image resolution based on the user's screen size and resolution, making the page more efficient for different devices. -->
+
+
+
+<img src="small.jpg" 
+     srcset="small.jpg 500w, medium.jpg 1000w, large.jpg 1500w"
+     sizes="(max-width: 600px) 100vw, 50vw"
+     alt="Responsive Image">
+<!-- srcset: Defines multiple image files with different widths.
+sizes: Defines how the browser should choose which image size to load.
+3. Use picture Element for Image Format Fallback
+The <picture> element allows you to define different image formats and provide fallback images for older browsers. -->
+
+
+
+<picture>
+  <source srcset="image.webp" type="image/webp">
+  <source srcset="image.jpg" type="image/jpeg">
+  <img src="image.jpg" alt="Fallback image">
+</picture>
+<!-- Modern browsers will use the WebP format for better compression, while older browsers will fallback to JPEG.
+4. Optimize Image Size and Format
+Use modern image formats like WebP for smaller file sizes.
+Compress images using tools like TinyPNG or ImageOptim to reduce file size without noticeable quality loss.
+Serve appropriately sized images, especially for mobile users, to avoid loading unnecessarily large files.
+5. Preload Important Media
+You can use <link> to preload critical images, audio, or video files that are needed early on a page, improving loading performance. -->
+
+
+
+<link rel="preload" href="/HTML AND CSS/pikaso_texttoimage_A-young-girl-of-Caucasian-descent-using-a-tablet-w.jpeg" as="image">
+<!-- 6. Use muted Attribute for Autoplaying Video
+If you want a video to autoplay, most browsers only allow this if the video is muted. This avoids annoying users with unexpected sound. -->
+
+
+
+<video autoplay muted loop>
+  <source src="video.mp4" type="video/mp4" >
+</video>
+<!-- autoplay: Starts the video automatically.
+muted: Ensures the video can play without user interaction.
+loop: Replays the video automatically when it ends.
+7. Use playsinline for Mobile Devices
+If you want a video to play inline (within the web page) on mobile devices, use the playsinline attribute. -->
+
+
+
+<video playsinline controls>
+  <source src="video.mp4" type="video/mp4">
+</video>
+<!-- 8. Use Multiple Audio/Video Sources for Compatibility
+Different browsers support different audio/video formats, so always provide multiple formats (like MP3, OGG for audio, and MP4, WebM for video). -->
+
+
+
+<video controls>
+  <source src="video.mp4" type="video/mp4">
+  <source src="video.webm" type="video/webm">
+  Your browser does not support the video tag.
+</video>
+<!-- 9. Fallback Content for Older Browsers
+For users on older browsers that don't support modern HTML5 media tags, provide fallback text or images. -->
+
+
+
+<audio controls poster="">
+  <source src="audio.mp3" type="audio/mpeg">
+  <source src="audio.ogg" type="audio/ogg" >
+  Your browser does not support the audio element. 
+  <a href="audio.mp3">Download the audio file</a>.
+</audio>
+<!-- 10. Set Poster Image for Videos
+The poster attribute allows you to define an image that will be displayed before the video starts. -->
+
+
+
+<video controls poster="/HTML AND CSS/bg (2).gif">
+  <source src="video.mp4" type="video/mp4">
+</video>
+<!-- 11. Include Subtitles and Captions
+To make video content accessible, include subtitles using the <track> element, which provides captions for the video. -->
+
+
+
+<video controls>
+  <source src="video.mp4" type="video/mp4">
+  <track src="captions.vtt" kind="subtitles" srclang="en" label="English">
+</video>
+kind="subtitles": Defines the track as subtitles.
+<!-- srclang: Language of the subtitles.
+label: What users see as the caption option.
+12. Use Accessible alt Text for Images
+Always provide meaningful and descriptive alt text for images to improve accessibility and SEO. If an image is purely decorative, use an empty alt tag (alt=""). -->
+
+
+
+<img src="decorative.jpg" alt="">
+<!-- 13. Use CSS for Better Image and Media Control
+Use CSS to control the presentation of media, including centering images, controlling dimensions, and ensuring responsiveness: -->
+
+
+<style>
+    img {
+  max-width: 100%;
+  height: auto;
+}
+</style>
+<!-- 14. Use Media Queries for Responsive Design
+Use media queries to adapt media to different screen sizes. For example, you can hide or show images depending on the device type. -->
+
+
+
+<style>
+    @media (max-width: 768px) {
+  .large-image {
+    display: none;
+  }
+}
+</style>
+<!-- 15. Compress Audio and Video Files
+Use MP3 for audio (best compatibility).
+Use MP4 with H.264 codec for video (most widely supported).
+Use tools like HandBrake to compress video files while maintaining quality.
+16. Use picture-in-picture for Video
+Enable Picture-in-Picture mode for videos to allow users to view videos in a small floating window. -->
+
+
+
+<video controls>
+  <source src="video.mp4" type="video/mp4">
+  <button onclick="document.querySelector('video').requestPictureInPicture()">Picture-in-Picture</button>
+</video>
+<!-- 17. Embed SVG for Scalable Vector Graphics
+SVGs are scalable and lightweight image formats that can be embedded directly into HTML. They remain crisp at any resolution and file size is usually small. -->
+
+
+
+<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red"/>
+</svg>
+<!-- 18. Avoid Overloading Pages with Too Much Media
+Loading too many high-resolution images, large video files, or complex media can slow down the page. Use lazy loading, content delivery networks (CDNs), and responsive design to optimize media. -->
+</body>
+</html>

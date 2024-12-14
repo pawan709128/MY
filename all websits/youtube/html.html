@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="shortcut icon" href="/public/Images/fivicon.ico" type="image/x-icon">
+  <title>YouTube</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+   /* Base Styles */
+* {
+  background-color: #0f0f0f;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  align-items: center;
+  color: white;
+  display: flex;
+  font-size: 20px;
+  justify-content: space-between;
+  padding: 5px;
+  width: 100%;
+}
+
+.header_logo {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  width: 20%;
+}
+
+.header_logo span:nth-child(1) {
+  background-color: #222222;
+  border-radius: 40px;
+  padding: 11px;
+}
+
+.header_search {
+  align-items: center;
+  display: flex;
+  width: 40%;
+}
+
+.header_search input {
+  border: 1px solid #222222;
+  border-bottom-left-radius: 20px;
+  border-right: none;
+  border-top-left-radius: 20px;
+  height: 5.5vh;
+  padding: 10px;
+  width: 85%;
+}
+
+.header_search span {
+  background-color: #222222;
+  border: 1px solid rgba(121, 121, 121, 0.863);
+  border-bottom-right-radius: 20px;
+  border-left: none;
+  border-top-right-radius: 20px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  width: 70px;
+}
+
+.header_allicons {
+  width: 10%;
+}
+
+.header_allicons span {
+  margin-right: 10%;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 1fr 11fr;
+  margin-top: 1%;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.link_nev {
+  margin-bottom: 25px;
+  padding: 5px;
+  text-align: center;
+}
+
+.link_nev a {
+  color: white;
+  font-size: 14px;
+}
+
+.channel_banner img {
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px rgb(43, 42, 42);
+  height: 40vh;
+  width: 90%;
+}
+
+.youtube_channel_info {
+  display: grid;
+  grid-template-columns: 3fr 9fr;
+  margin-top: 2%;
+}
+
+.youtube_channel_logo img {
+  border-radius: 100px;
+  color: white;
+  height: 25vh;
+  width: 50%;
+}
+
+.youtube_channel_text_title {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+}
+
+.youtube_channel_text_title1 {
+  color: #979797;
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.youtube_channel_info button {
+  background-color: white;
+  border-radius: 30px;
+  font-weight: bold;
+  margin: 10px;
+  padding: 10px;
+  width: 120px;
+}
+
+.youtube_channel_text_title1 a {
+  color: blue;
+}
+
+.allpagelinkswction {
+  border-bottom: 1px solid #3f3f3f;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.allpagelinkswction ul {
+  display: flex;
+  gap: 2%;
+  padding: 10px;
+}
+
+.allpagelinkswction ul li:first-child a {
+  border-bottom: 2px solid white;
+  color: white;
+  padding-bottom: 2px;
+}
+
+.allpagelinkswction ul li a {
+  color: #6c7073;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+.video_section {
+  width: 60%;
+}
+
+.card1 {
+  color: white;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+}
+
+.card_video {
+  height: 40vh;
+  width: 50%;
+}
+
+.card_video iframe {
+  border-radius: 60px;
+  height: 100%;
+  width: 100%;
+}
+
+.card1_text {
+  width: 50%;
+}
+
+.card1_text_dis_title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 400px;
+}
+
+.card1_text_dis {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 400px;
+}
+
+.card1_text_dis1 {
+  color: #fff;
+  line-height: 25px;
+  margin-top: 20px;
+}
+
+.For_you {
+  border-top: 1px solid #3f3f3f;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+.videos_text_kard {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 2px;
+  padding: 5px;
+}
+
+.For_you_title {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  font-style: initial;
+  padding: 10px;
+}
+
+.For_you_vedio iframe {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.For_you_text {
+  color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 200px;
+}
+
+.videos_text_kard_one {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(4, 3fr);
+  height: 30vh;
+}
+
+main {
+  height: 640px;
+  overflow: auto;
+}
+
+.bi-check-lg {
+  color: #636363;
+  font-size: 15px;
+}
+/* Hover Effect for Links */
+.link_nev a:hover {
+  color: #f0f0f0;
+  text-decoration: underline;
+}
+
+/* Hover Effect for Header Icons */
+.header_allicons span:hover {
+  color: #f0f0f0;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/* Hover Effect for Buttons */
+.youtube_channel_info button:hover {
+  background-color: #d3d3d3;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover Effect for Videos Thumbnails */
+.card_video:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Hover Effect for Text Over Videos */
+.card1_text_dis_title:hover {
+  color: #d3d3d3;
+  transition: color 0.3s ease;
+}
+
+/* Hover Effect for "For You" Section Videos */
+.videos_text_kard_one:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Hover Effect for Channel Banner Image */
+.channel_banner img:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Responsive Media Queries */
+
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    font-size: 16px;
+  }
+
+  .header_logo {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .header_search {
+    width: 100%;
+  }
+
+  .header_search input {
+    width: 100%;
+  }
+
+  .header_search span {
+    width: auto;
+  }
+
+  .header_allicons {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  section {
+    grid-template-columns: 1fr;
+  }
+
+  .youtube_channel_info {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .card1 {
+    flex-direction: column;
+  }
+
+  .card1_text_dis_title,
+  .card1_text_dis {
+    width: 100%;
+  }
+
+  .videos_text_kard {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    font-size: 14px;
+  }
+
+  .header_search input {
+    height: 4vh;
+    padding: 5px;
+  }
+
+  .youtube_channel_info {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .videos_text_kard {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card_video,
+  .card1_text {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    font-size: 12px;
+  }
+
+  .header_logo {
+    width: 100%;
+  }
+
+  .header_search {
+    width: 100%;
+  }
+
+  .header_search input {
+    padding: 3px;
+    height: 3.5vh;
+  }
+
+  .videos_text_kard {
+    grid-template-columns: 1fr;
+  }
+
+  .youtube_channel_text_title {
+    font-size: 24px;
+  }
+
+  .youtube_channel_text_title1 {
+    font-size: 12px;
+  }
+}
+
+</style>
+<body>
+  <header>
+    <div class="header_logo">
+      <span class="bi bi-three-dots-vertical"></span>
+      <span><img src="/public/Images/youtube_logo.png" alt="YouTube Logo"></span>
+    </div>
+    <div class="header_search">
+      <input type="text" placeholder="Search">
+      <span class="bi bi-search"></span>
+    </div>
+    <div class="header_allicons">
+      <span class="bi bi-camera-video"></span>
+      <span class="bi bi-bell"></span>
+      <span class="bi bi-person-add"></span>
+    </div>
+  </header>
+  <section>
+    <nav>
+      <div class="link_nev">
+        <a href="">
+          <i class="bi bi-house-door"></i>
+          <div>Home</div>
+        </a>
+      </div>
+      <div class="link_nev">
+        <a href="">
+          <i class="bi bi-valentine"></i>
+          <div>Shorts</div>
+        </a>
+      </div>
+      <div class="link_nev">
+        <a href="">
+          <i class="bi bi-camera-reels"></i>
+          <div>Subscriptions</div>
+        </a>
+      </div>
+      <div class="link_nev">
+        <a href="">
+          <i class="bi bi-caret-left-fill"></i>
+          <div>You</div>
+        </a>
+      </div>
+    </nav>
+    <main>
+      <article>
+        <div class="channel_banner"><img src="/public/Images/channel_banner.jpg" alt="Channel Banner"></div>
+        <div class="youtube_channel_info">
+          <div class="youtube_channel_logo">
+            <img src="/public/Images/channels_profile_logo.jpg" alt="Channel Logo">
+          </div>
+          <div class="youtube_channel_text">
+            <div class="youtube_channel_text_title">Kalia Ustaad - Official Channel <span ></span><i class="bi bi-check-lg"></i></div>
+            <div class="youtube_channel_text_title1">@KaliaUstaad • 1.92M subscribers • 1.3K videos</div>
+            <div class="youtube_channel_text_title1">Kalia, the highly famous cartoon character created by Green Gold
+              Animation has attracted a large audience.</div>
+            <div class="youtube_channel_text_title1"><a href="https://bit.ly/codonnetflix">bit.ly/codonnetflix</a> and 5
+              more links</div>
+            <button class="Subscribe">
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </article>
+      <div class="allpagelinkswction">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Video</a></li>
+          <li><a href="">Shorts</a></li>
+          <li><a href="">Playlist</a></li>
+        </ul>
+      </div>
+
+
+
+      <div class="video_section">
+        <div class="card1">
+          <div class="card_video">
+            <iframe src="https://www.youtube.com/embed/s4ZqrguyYmg" frameborder="0"></iframe>
+          </div>
+          <div class="card1_text">
+            <div class=" card1_text_dis_title">Kalia Ustaad - Raju's Call for Help! | मजेदार कहानियाँ | Cartoons for
+              Kids in Hindi</div>
+            <div class="card1_text_dis">103,036 views • 5 months ago</div>
+            <div class="card1_text_dis1"><a href="">#cartoon #kalia #chhotabheem #kidsvideos #funny #viral </a>
+              Watch more fun videos of Kalia Ustaad. Subscribe now for more videos: <a
+                href="http://bit.ly/KaliaUstaad">http://bit.ly/KaliaUstaad</a>
+              Watch more Kids Videos for Kids of Kalia @KaliaUstaad. Catch up on all interesting Kalia Ustaad videos &
+              episodes fascinating kids cartoons @greengoldtv. Watch attractive cartoon stories for kids like funny
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- For_you -->
+      <div class="For_you">
+        <div class="For_you_title">For you</div>
+        <!-- video 1 -->
+
+        <div class="videos_text_kard_one">
+          <div>
+            <div class="For_you_vedio">
+              <iframe src="https://www.youtube.com/embed/xOIZ0IyVxzA?si=EWC3gcINz9lJGtAO" frameborder="0"></iframe>
+            </div>
+            <div class="For_you_text">
+              Kalia Ustaad - Bheem VS Kalia Kite Battle | भीम VS कालिया पतंग की लड़ाई | Fun Kids Videos
+            </div>
+          </div>
+         
+          <!-- video 2 -->
+          <div>
+            <div class="For_you_vedio">
+              <iframe src="https://www.youtube.com/embed/vpP90xED5Hs?si=ncvtB_WuBb8XgoDR" frameborder="0"></iframe>
+            </div>
+            <div class="For_you_text">
+              Kalia Ustaad - Joyful Moments With Friends | Funny Videos | Chhota Bheem Cartoon
+            </div>
+          </div>
+          <!-- video 3 -->
+          <div>
+            <div class="For_you_vedio">
+              <iframe src="https://www.youtube.com/embed/qlXohOPTbXs?si=cuc3CJ9Ou675U-UU" frameborder="0"></iframe>
+            </div>
+            <div class="For_you_text">
+              Chhota Bheem - Kalia trapped in an Egg | Cartoons for Kids | Fun Kids Videos
+            </div>
+          </div>
+          <!-- video 4 -->
+          <div>
+            <div class="For_you_vedio">
+              <iframe src="https://www.youtube.com/embed/bVnmI2MULJ4?si=PNsXvFMJFyjDCO4X" frameborder="0"></iframe>
+            </div>
+            <div class="For_you_text">
+              Chhota Bheem aur Krishna - Unstoppable Duo Unite | Cartoons for Kids | Fun Kids Videos
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- Videos -->
+      <div class="For_you">
+        <div class="For_you_title">Videos</div>
+        <!-- video 1 -->
+
+        <div class="videos_text_kard">
+          <div>
+            <div class="For_you_vedio">
+              <iframe src="https://www.youtube.com/embed/YIKkB6uA5FE?si=wnDiYWsn-IJKFtb0" frameborder="0"></iframe>
+            </div>
+            <div class="For_you_text">
+              Chhota Bheem Kirmada ka Keher | Cartoon Movies for Kids | Animation Videos in Hindi
+            </div>
+          </div>
+         
+          <!-- video 2 -->
+          <div>
+            <div class="For_you_vedio">
+              <iframe src="https://www.youtube.com/embed/EfC6-qDxHUs?si=zn5v9B2awtgIXkSv" frameborder="0"></iframe>
+            </div>
+            <div class="For_you_text">
+              Chhota Bheem aur Krishna - Agni Chakra ke Khoj | Cartoons for Kids | Fun Kids Videos
+            </div>
+          </div>
+          <!-- video 3 -->
+          <div>
+            <div class="For_you_vedio">
+              <iframe src="https://www.youtube.com/embed/Xae2TDFJOdg?si=XApxFYRTLc5rcrRY" frameborder="0"></iframe>
+            </div>
+            <div class="For_you_text">
+              Chhota Bheem and Krishna - Rango se Bhari Holi | Holi Special | Hindi Cartoon for Kids
+            </div>
+          </div>
+          <!-- video 4 -->
+          <div>
+            <div class="For_you_vedio">
+              <iframe src="https://www.youtube.com/embed/tWPpFgdSsaw?si=7PWC9pm9zFTjyNn-" frameborder="0"></iframe>
+            </div>
+            <div class="For_you_text">
+              Chhota Bheem - Twin Bheem Battle | Part 2 | Fun Kids Videos
+            </div>
+          </div>
+          <!-- video 5 -->
+          <div>
+            <div class="For_you_vedio">
+              <iframe src="https://www.youtube.com/embed/2-DWVYrAVrY?si=bEzIJZ8JRfoaUcuc" frameborder="0"></iframe>
+            </div>
+            <div class="For_you_text">
+              Chhota Bheem Aur Krishna - Mysterious Fruit | Hindi Cartoon | Kids Videos
+            </div>
+          </div>
+        </div>
+      </div>
+
+     
+      
+
+      <!-- Kalia Ustaad Ka Swag -->
+      <div class="For_you">
+        <div class="For_you_title">Kalia Ustaad Ka Swag</div>
+        <!-- video 1 -->
+
+        <div class="videos_text_kard">
+          <div>
+            <div class="For_you_vedio">
+              <iframe src="https://www.youtube.com/embed/DS-khWV43aw?si=YLSDtpX8ca5MI4Sg" frameborder="0"></iframe>
+            </div>
+            <div class="For_you_text">
+              Chhota bheem aur Krishna - Fun Moments | छोटा भीम और कृष्णा की दोस्ती | Fun Kids Videos
+            </div>
+          </div>
+         
+          <!-- video 2 -->
+          <div>
+            <div class="For_you_vedio">
+              <iframe src="https://www.youtube.com/embed/Y5mTUbbvXak?si=nSIHwkv1kk0WtUMd" frameborder="0"></iframe>
+            </div>
+            <div class="For_you_text">
+              Chutki - Try Not to Laugh Challenge | Comedy Compilations for Kids | Best Funny Videos 2024
+            </div>
+          </div>
+          <!-- video 3 -->
+          <div>
+            <div class="For_you_vedio">
+              <iframe src="https://www.youtube.com/embed/-alHsYBtBZY?si=nyak_sV6yqIkh862" frameborder="0"></iframe>
+            </div>
+            <div class="For_you_text">
+              Chhota Bheem - The Messy Mausi | Cartoons for Kids | Best Comedy Compilation
+            </div>
+          </div>
+          <!-- video 4 -->
+          <div>
+            <div class="For_you_vedio">
+              <iframe src="https://www.youtube.com/embed/U188J4QSODM?si=04fHDyeq3KRYBvS2" frameborder="0"></iframe>
+            </div>
+            <div class="For_you_text">
+              Chhota Bheem - Rangon Ka Jaadu | Happy Holi | Cartoons for Kids
+            </div>
+          </div>
+          <!-- video 5 -->
+          <div>
+            <div class="For_you_vedio">
+              <iframe src="https://www.youtube.com/embed/g0xhXPn6lpg?si=EgInasrWgANIqS30" frameborder="0"></iframe>
+            </div>
+            <div class="For_you_text">
+              Chhota Bheem - SpookyPur mein Adla Badli | Cartoons for Kids | Funny Kids Videos in Hindi
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chhota Start-Up: Brand New Show -->
+      <div class="For_you">
+        <div class="For_you_title">Chhota Start-Up: Brand New Show</div>
+        <!-- video 1 -->
+
+        <div class="videos_text_kard">
+          <div>
+            <div class="For_you_vedio">
+              <iframe src="https://www.youtube.com/embed/vZDLGLJHq9w?si=7EnQPlDw_rMJheXH" frameborder="0"></iframe>
+            </div>
+            <div class="For_you_text">
+              Chhota Bheem - जुड़वां इंदुमती की उथल पुथल | Cartoons for Kids in Hindi | Fun Stories in YouTube
+            </div>
+          </div>
+         
+          <!-- video 2 -->
+          <div>
+            <div class="For_you_vedio">
+              <iframe src="https://www.youtube.com/embed/zq4e-zHn2D4?si=D_qJpmWcgrbY8M73" frameborder="0"></iframe>
+            </div>
+            <div class="For_you_text">
+              Kalia Ustaad - कालिया का मेकओवर | Chhota Bheem Cartoon Videos for Kids | छोटा भीम हिंदी कहानियाँ
+            </div>
+          </div>
+          <!-- video 3 -->
+          <div>
+            <div class="For_you_vedio">
+              <iframe src="https://www.youtube.com/embed/kWHJMQ8bPW8?si=jmEOUjdm3d3r0Zbc" frameborder="0"></iframe>
+            </div>
+            <div class="For_you_text">
+              Chutki - The Saviour Kutkut VS The Villain Tamshi Lal | Chhota Bheem Videos for Kids
+            </div>
+          </div>
+          <!-- video 4 -->
+          <div>
+            <div class="For_you_vedio">
+              <iframe src="https://www.youtube.com/embed/ISsqWqQSZ5Q?si=4OTOrtxGvd1n6pdM" frameborder="0"></iframe>
+            </div>
+            <div class="For_you_text">
+              Kalia Ustaad - The Queen of Dholakpur | Cartoon for kids | Fun videos for kids
+            </div>
+          </div>
+          <!-- video 5 -->
+          <div>
+            <div class="For_you_vedio">
+              <iframe src="https://www.youtube.com/embed/xOIZ0IyVxzA?si=EWC3gcINz9lJGtAO" frameborder="0"></iframe>
+            </div>
+            <div class="For_you_text">
+              Kalia Ustaad - Bheem VS Kalia Kite Battle | भीम VS कालिया पतंग की लड़ाई | Fun Kids Videos
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </section>
+</body>
+
+</html>

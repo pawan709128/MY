@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en-in">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, CSS, Bootstrap, demo, web development">
+    <meta name="description" content="This is a demo HTML and CSS file showing various web development techniques.">
+    <title>Demo</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <link rel="shortcut icon" href="./Images/favicon.ico" type="image/x-icon">
+    <style>
+        nav {
+            font-size: large;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 900;
+            font-style: italic;
+            font-variant: normal;
+            color: aquamarine;
+            border: 1px solid gray;
+            border-radius: 43px 45px 33px 54px;
+        }
+        /* Linear Gradient - Vertical */
+        .linear-vertical {
+            width: 300px;
+            height: 200px;
+            background-image: linear-gradient(to bottom, #ff7e5f, #feb47b);
+            margin-bottom: 20px;
+        }
+        /* Linear Gradient - Diagonal */
+        .linear-diagonal {
+            width: 300px;
+            height: 200px;
+            background-image: linear-gradient(to bottom right, #43cea2, #185a9d);
+            margin-bottom: 20px;
+        }
+        /* Radial Gradient - Centered */
+        .radial {
+            width: 300px;
+            height: 200px;
+            background-image: radial-gradient(circle, #f4d03f, #16a085);
+        }
+        main {
+            width: 59%;
+            height: 50vh;
+            background-image: url(./Images/img1.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .first_letter::first-letter {
+            font-size: 54px;
+            font-weight: bold;
+            font-family: Arial;
+            line-height: 30px;
+        }
+        p {
+            line-height: 65px;
+            letter-spacing: 5px;
+            word-spacing: 56px;
+            color: green;
+            word-break: break-all;
+        }
+        .ellipse_section {
+            width: 200px;
+            height: 40px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        dl {
+            columns: 2;
+            column-gap: 50px;
+            column-width: 65px;
+            column-rule: 3px dotted bisque;
+        }
+        fieldset {
+            border: 4px solid red;
+        }
+        .ulIMG {
+            list-style: none;
+            list-style-image: url("./Images/favicon.ico");
+            font-size: 30px;
+        }
+        a:active{
+            color: #f4d03f;
+        }
+        a:visited{
+            color: #ff7e5f;
+        }
+        input:valid+span{
+            display: none;
+
+        }
+        .input_email:invalid+span{
+            color: red;
+            display: block;
+        }
+        .input_Name:invalid+span{
+            color: red;
+            display: block;
+        }
+        .input_Name:valid+span{
+            display: none;
+        }
+.inputMobile:invalid ~ .number_pattern {
+    display: block;
+    color: red;
+}
+
+.inputMobile:valid ~ .number_pattern {
+    display: none;
+}
+
+.number_required {
+    display: none;
+}
+.inputMobile:required ~ .number_required{
+ display:block;
+ color: red;
+}
+    </style>
+</head>
+<body>
+    <section class="container-fluid d-flex row">
+        <nav class="iframNav col-3">
+            <ul>
+                <li><a href="./Images/img1.jpg" target="_blank">Img_Blank</a></li>
+                <li><a href="./Images/img1.jpg" target="_parent">Img_Parent</a></li>
+                <li><a href="./Images/img1.jpg" target="_self">Img_Self</a></li>
+                <li><a href="./Images/img1.jpg" target="_top">Img_Top</a></li>
+                <li><a href="skype:nareshit@outlook.com" target="preview">ImgIframeBody</a></li>
+                <li><a href="javascript:void(0);" onclick="window.open('./Images/img1.jpg', 'man', 'width=300,height=500');">imgNewWindow</a></li>
+                <li><a href="./Images/img1.jpg" download="pawan">downloadImg</a></li>
+                <li><a href="#">EmptyLink</a></li>
+            </ul>
+        </nav>
+        <main class="iframSection col-9">
+            <iframe name="preview" width="100%" height="40vh"></iframe>
+        </main>
+    </section>
+    
+    <ul>
+        <li><a  href="">clickme</a></li>
+        <li><a href="">click <a href=""></a></li>
+    </ul>
+    <img src="./Images/img1.jpg" width="400" height="400" title="hello" alt="Image" vspace="50" hspace="50px" align="right">
+    <header class="row">
+        <div class="navbar-brand col-2">Pawan.</div>
+        <nav class="nav col-6">
+            <div class="nav-item">
+                <a href="" class="nav-link">Home</a>
+            </div>
+        </nav>
+        <div class="input-group col-4">
+            <input type="text" class="form-control" placeholder="Search">
+            <button class="btn bi bi-search input-group-text btn-success"></button>
+        </div>
+    </header>
+    
+    <section>
+        <article>
+            <h2>Benefits of Practicing Yoga</h2>
+            <p>Yoga has numerous benefits for both the body and mind. It helps improve flexibility, strength, and mental clarity.</p>
+        
+            <dialog id="yoga-dialog">
+                <p>Yoga is an ancient practice that includes physical postures, breath control, and meditation.</p>
+            </dialog>
+            <button class="btn btn-secondary" id="open-dialog" onclick="DialogOpenClick()">Open</button>
+            
+            <figure style="border: 1px solid green; margin: 19px 38px 38px 54px;">
+                <img src="./Images/img1.jpg" alt="Person practicing yoga in nature">
+                <figcaption>Practicing yoga in a serene environment helps to enhance mindfulness.</figcaption>
+            </figure>
+        </article>
+
+        <span class="bi bi-0-circle">I am zero</span>
+        <span class="bi bi-1-circle">I am one</span>
+    </section>
+    
+    <section>
+        <h2>CSS Gradient Examples</h2>
+
+        <div class="linear-vertical"></div>
+        <p>Linear Gradient (Vertical): Transition from top to bottom.</p>
+    
+        <div class="linear-diagonal"></div>
+        <p>Linear Gradient (Diagonal): Transition diagonally.</p>
+    
+        <div class="radial"></div>
+        <p>Radial Gradient: Colors radiate from the center.</p>
+    </section>
+    
+    <footer>
+        <aside>
+            <a href="" class="bi bi-facebook link-info">Facebook</a>
+            <a href="" class="bi bi-instagram link-danger">Instagram</a>
+        </aside>
+        <address>
+            <a href="" class="bi bi-phone-fill"></a>
+            <a href="" class="bi bi-send-arrow-down-fill"></a>
+        </address>
+    </footer>
+    
+    <main>
+        <p class="first_letter">Pawan Kumar Pathak Lorem ipsum dolor sit amet consectetur, adipisicing elit...</p>
+        <p class="ellipse_section">Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
+    </main>
+    
+    <section class="container-fluid">
+        <fieldset>
+            <legend>Hello</legend>
+            <dl>
+                <dt>May</dt>
+                <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit...</dd>
+                <dt>June</dt>
+                <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit...</dd>
+            </dl>
+        </fieldset>
+    </section>
+
+    <ol reversed>
+        <li>Hello</li>
+        <li>Hello1</li>
+        <li>Hello</li>
+        <li>Hello1</li>
+    </ol>
+
+    <ol type="A" start="4">
+        <li>Hello</li>
+        <li>Hello1</li>
+    </ol>
+
+    <ol type="a" start="4">
+        <li>Hello</li>
+        <li>Hello1</li>
+    </ol>
+
+    <ol type="I" start="2" reversed>
+        <li>Hello</li>
+        <li>Hello1</li>
+    </ol>
+
+    <ul type="circle">
+        <li>Rahul</li>
+        <li>Hfh</li>
+        <li>Mnkja</li>
+    </ul>
+
+    <ul class="ulIMG">
+        <li>Rahul</li>
+        <li>Hfh</li>
+        <li>Mnkja</li>
+    </ul>
+
+        <table frame="below" tules="cols">
+            <caption align="top" valign="center">hello i am a pawan</caption>
+            <thead>
+                <th>
+                    <td>Name</td>
+                    <td>Mobile</td>
+                    <td>Email</td>
+                </th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pawan</td>
+                    <td>7091285543</td>
+                    <td>pp1980543@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
+        <section class="form">
+            <form action="">
+                <div class="mt-2 w-50 p-2">
+                    <label for="" class="form-label">Name</label>
+                    <input type="text" class="form-control input_Name" placeholder="Enter Name..." required pattern="(?=.*[A-Z])[a-zA-Z]+">
+                    <span>Enter Name First Name Capital</span>
+                </div>
+                <div class="mt-2 w-50 p-2">
+                    <label for="" class="form-label">Email</label>
+                    <input type="email" class="form-control input_email" placeholder="Enter Email..." required pattern="\w{4,}+gmail\.come">
+                    <span>Enter your email Id.</span>
+                </div>
+                <div class="mt-2 w-50 p-2">
+                    <label for="" class="form-label">Mobile</label>
+                    <input type="text" class="form-control inputMobile" required placeholder="+91XXXXXXXXXX" value="+91" pattern="\+91[6-9]\d{9}" maxlength="13" minlength="13">
+                    <span class="number_pattern">pl chack Number </span>
+                    <span class="number_required">Enter Number right way +91XXXXXXXXXX</span>
+                </div>
+                <div class="mt-2 w-50 p-2">
+                    <fieldset>
+                        <legend><label for="gender" class="name">Gender</label></legend>
+                        <label for="male" class="form-label">Male</label>
+                        <input type="radio" name="gender" class="form-check" value="male" checked>
+                        <label for="female" class="form-label">Female</label>
+                        <input type="radio" name="gender" class="form-check" value="female">
+                    </fieldset>
+                </div>
+                <div class="mt-2 p-2 w-50"></div>
+                <select name="city" id="city" class="form-select">
+                    <option value="patna" selected>Patna</option>
+                    <option value="gaya">Gaya</option>
+                </select>
+            </form>
+        </section>
+
+    <script>
+        function DialogOpenClick(){
+            alert("Hi");
+            document.getElementById('yoga-dialog').showModal();
+        }
+        
+    </script>
+</body>
+</html>

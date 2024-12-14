@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <title>Modal</title>
+</head>
+<style>
+     .passwordInput:valid + .form-text {
+      display: none;
+    }
+    .passwordInput:invalid + .form-text {
+      display: block;
+      color: red;
+    }
+</style>
+<body>
+  <header class="d-flex justify-content-between bg-black w-100 p-4">
+    <div class="h1 text-light">Simly.</div>
+    <div></div>
+    <div><button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#loginform">Login</button>
+    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#registrationForm">Registration</button>
+    </div>
+  </header>
+  <div class="container-fluid">
+    
+    
+
+    <div class="modal fade" id="loginform">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>User Login</h3>
+            <button class="btn btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            
+            <form action="">
+              <div class="my-2">
+                <label for="email" class="form-label">Email</label>
+              
+                <input type="text" name="email" class="form-control mb-3" required>
+              </div>
+              <div class="mb-2">
+                <label for="password" class="form-label">Password</label>
+                <div class="mb-3">
+                  <label for="password" class="form-label">Password</label>
+                  <!-- Fixed the pattern and structure -->
+                  <input type="password" class="form-control passwordInput" name="password" id="password" 
+                         required pattern="(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}">
+                  <div class="form-text">Password must contain at least 8 characters, including an uppercase letter, a number, and a special character (e.g., @, $, !, %, *, ?).</div>
+                </div>
+               
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-success">Login</button>
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="w-100 p-2">
+    <div class="modal fade" id="registrationForm">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="h3">Registration Form</div>
+                        <button class="btn btn-close" data-bs-dismiss="modal"></button>
+
+          </div>
+          <div class="modal-body">
+            <form action="" method="post">
+              <div class="m-2">
+                <label for="name" class="form-label">Name:-</label>
+                <input type="text" class="form-control" name="name">
+              </div>
+              <div class="mb2">
+                <label for="mobile" class="form-label">Mobile No.</label>
+                <input type="text" name="mobile" class="form-control" pattern="\+91(?=.*[6-9])\d{9}">
+              </div>
+              <div class="m-2">
+                <label for="email" class="form-label">Email Id</label>
+                <input type="email" name="email" class="form-control">
+              </div>
+              <div class="mb-2 ">
+                <select name="" id="" class="form-select">
+                  <option value="">html</option>
+                  <option value="">css</option>
+                </select>
+              </div>
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Enter College Name...">
+                <span class="bi bi-search input-group-text"></span>
+              </div>
+              <div class="m-2">
+                <button class="btn btn-success">Registration</button>
+                <button class="btn btn-danger" data-bs-dismiss="modal"> Cancel
+
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
+<!-- 
+.modal                                    : Base class for modals.
+.modal-dialog, .modal-content             : Structures the dialog and its content.
+.modal-header, .modal-body, .modal-footer : Used to format various sections inside a modal.
+.modal-dialog-centered, .modal-fullscreen, .modal-dialog-scrollable: Variants for centering, full screen, or scrollable modals.
+Attributes:
+data-bs-toggle="modal"  : Specifies the element that triggers the modal.
+data-bs-target          : Refers to the modal's ID to be displayed.
+data-bs-dismiss         : Used to dismiss th -->

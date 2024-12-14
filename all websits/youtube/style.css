@@ -1,0 +1,274 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #0f0f0f;
+  }
+  header {
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+  }
+  .header_logo  {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .header_logo span:nth-child(1){
+    padding: 11px;
+    background-color: #222222;
+    border-radius: 40px;
+  }
+  .header_search {
+    width: 40%;
+
+  }
+
+  .header_search {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header_search input {
+    width: 85%;
+    height: 5.5vh;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 10px;
+    border: 1px solid #222222;
+    border-right: none; 
+  }
+  
+  .header_search span {
+    display: inline-block;
+    padding: 10px;
+    background-color:#222222;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-align: center;
+    width: 70px;
+    border: 1px solid #222222(121, 121, 121, 0.863); 
+    border-left: none; 
+    cursor: pointer; 
+  }
+  
+
+  .header_allicons {
+    width: 10%;
+  }
+
+  .header_allicons span {
+    margin-right: 10%;
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: 1fr 11fr;
+    margin-top: 1%;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .link_nev {
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 25px;
+  }
+
+  .link_nev a {
+    color: white;
+    font-size: 14px;
+    
+  }
+
+  .channel_banner img {
+    width: 90%;
+    height: 40vh;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px rgb(43, 42, 42);
+  }
+
+  .youtube_channel_info {
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+    margin-top: 2%;
+  }
+
+  .youtube_channel_logo img {
+    width: 50%;
+    height: 25vh;
+    border-radius: 100px;
+    color: white;
+  }
+
+  .youtube_channel_text_title {
+    font-size: 30px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .youtube_channel_text_title1 {
+    color:#979797;
+    font-size: 15px;
+    margin-top: 15px;
+  }
+
+  .youtube_channel_info button {
+    padding: 10px;
+    background-color: white;
+    width: 120px;
+    border-radius: 30px;
+    font-weight: bold;
+    margin: 10px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .youtube_channel_text_title1 a {
+    color: blue;
+  }
+
+  .allpagelinkswction {
+    width: 100%;
+    border-bottom: 1px solid #3f3f3f;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .allpagelinkswction ul {
+    display: flex;
+    list-style: none;
+    gap: 2%;    
+    padding: 10px;
+  }
+  
+  .allpagelinkswction ul li a {
+    color: #6c7073;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .allpagelinkswction ul li:first-child a {
+
+    color: white;
+    border-bottom: 2px solid white;
+    padding-bottom: 2px;
+
+  }
+  .video_section {
+    width: 60%;
+  }
+
+  .card1_text_dis_title {
+    font-size: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 400px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .card1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+    color: white;
+    padding: 10pzx;
+  }
+
+  .card_video {
+    width: 50%;
+    height: 40vh;
+  }
+
+  .card_video iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 60px;
+  }
+
+  .card1_text {
+    width: 50%;
+  }
+
+  .card1_text_dis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 400px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .card1_text_dis1 {
+
+    color: #fff;
+    margin-top: 20px;
+    line-height: 25px;
+  }
+
+  .For_you {
+    width: 100%;
+    border-top: 1px solid #3f3f3f;
+    padding-bottom:20px ;
+
+  }
+
+  .videos_text_kard {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    padding: 5px;
+    margin: 2px;
+  }
+
+  main {
+    height: 640px;
+    overflow: auto;
+  }
+
+  .For_you_vedio iframe {
+    width: 100%;
+ 
+    border-radius: 10px;
+  }
+
+  .For_you_text {
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 200px;
+   
+  }
+
+  .For_you_title {
+    color: white;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: initial;
+    padding: 10px;
+  }
+  .videos_text_kard_one{
+    display: grid;
+    grid-template-columns: repeat(4, 3fr);
+    gap: 5px;
+    height: 30vh;
+  }
+  .bi-check-lg{
+    font-size: 15px;
+    color: #636363;
+  }

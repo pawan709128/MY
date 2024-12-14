@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: aqua;
+            width: 200px;
+            height: 200px;
+        }
+        p {
+    width: 70%;
+    overflow: hidden;                   /* Hides any overflow text */
+    display: -webkit-box;               /* Required for line clamping */
+    -webkit-box-orient: vertical;       /* Specifies vertical box layout */
+    -webkit-line-clamp: 3;              /* Limits the text to 2 lines */
+    line-clamp: 3;                      /* Modern browsers support */
+    white-space: normal;                /* Allows the text to wrap within the box */
+}
+    </style>
+</head>
+<body>
+ <div>
+    <p>Lorem ipsum possimus sequi fuga cupiditate.
+        Lorem ipsum possimus sequi fuga cupiditate.Lorem ipsum possimus sequi fuga cupiditate.Lorem ipsum possimus sequi fuga cupiditate.Lorem ipsum possimus sequi fuga cupiditate.
+    </p>
+    <p></p>
+ </div>
+</body>
+</html>

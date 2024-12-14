@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Nav & Tab</title>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <h1>Course</h1>
+        <ul class="nav nav-tabs" id="courseTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="ui-tab" data-bs-toggle="tab" href="#ui" role="tab" aria-controls="ui" aria-selected="true">UI Full Stack</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="java-tab" data-bs-toggle="tab" href="#java" role="tab" aria-controls="java" aria-selected="false">Java Full Stack</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="dotnet-tab" data-bs-toggle="tab" href="#dotnet" role="tab" aria-controls="dotnet" aria-selected="false">.NET Full Stack</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="python-tab" data-bs-toggle="tab" href="#python" role="tab" aria-controls="python" aria-selected="false">Python Full Stack</a>
+            </li>
+        </ul>
+        <div class="tab-content mt-4" id="courseTabsContent">
+            <!-- UI Full Stack Tab -->
+            <div class="tab-pane fade show active" id="ui" role="tabpanel" aria-labelledby="ui-tab">
+                <div class="container-fluid my-2">
+                    <div class="accordion" id="accordionUI">
+                        <!-- Accordion items for UI Full Stack -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#html">
+                                    HTML
+                                </button>
+                            </h2>
+                            <div id="html" class="accordion-collapse collapse" data-bs-parent="#accordionUI">
+                                <div class="accordion-body">
+                                    Learn the basics of HTML to build the structure of web pages.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add more accordion items for UI Full Stack here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Java Full Stack Tab -->
+            <div class="tab-pane fade" id="java" role="tabpanel" aria-labelledby="java-tab">
+                <div class="container-fluid my-2">
+                    <div class="accordion" id="accordionJava">
+                        <!-- Accordion items for Java Full Stack -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#javaCore">
+                                    Java Core
+                                </button>
+                            </h2>
+                            <div id="javaCore" class="accordion-collapse collapse" data-bs-parent="#accordionJava">
+                                <div class="accordion-body">
+                                    Learn Java fundamentals including OOP concepts, syntax, and basic programming constructs.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add more accordion items for Java Full Stack here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- .NET Full Stack Tab -->
+            <div class="tab-pane fade" id="dotnet" role="tabpanel" aria-labelledby="dotnet-tab">
+                <div class="container-fluid my-2">
+                    <div class="accordion" id="accordionDotnet">
+                        <!-- Accordion items for .NET Full Stack -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#dotnetCore">
+                                    .NET Core
+                                </button>
+                            </h2>
+                            <div id="dotnetCore" class="accordion-collapse collapse" data-bs-parent="#accordionDotnet">
+                                <div class="accordion-body">
+                                    Learn about .NET Core framework including C#, ASP.NET Core, and modern web development practices.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add more accordion items for .NET Full Stack here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Python Full Stack Tab -->
+            <div class="tab-pane fade" id="python" role="tabpanel" aria-labelledby="python-tab">
+                <div class="container-fluid my-2">
+                    <div class="accordion" id="accordionPython">
+                        <!-- Accordion items for Python Full Stack -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#pythonBasics">
+                                    Python Basics
+                                </button>
+                            </h2>
+                            <div id="pythonBasics" class="accordion-collapse collapse" data-bs-parent="#accordionPython">
+                                <div class="accordion-body">
+                                    Learn Python basics including syntax, data types, and control flow.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add more accordion items for Python Full Stack here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+    

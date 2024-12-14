@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* p[class~="Effect"] {
+            color:red;
+        } */
+         /* p[class="Effect"]{
+            color: rgb(166, 122, 25);
+         } */
+          /* p[class^="Effect"]{
+            color: blueviolet;
+          } */
+           /* p[class$="Effect"]{
+            color: red;
+           } */
+            /* p[class|="Effect"]{
+                color: brown;
+            } */
+    </style>
+</head>
+    <!-- 
+    [attribute=value]       exact match
+    [attribute^=value]      starts with
+    [attribute$=value]      ends with
+    [attribute|=value]      individual and can start with & separated with "-".
+    [attribute~=value]      any individual occurrence. -->
+<body>
+    <p class="Effect">Para-1</p>
+    <p class="TextEffect">Para-2</p>
+    <p class="EffectText">Para-3</p>
+    <p class="ParaEffectText">Para-4</p>
+    <p class="Text-Effect">Para-5</p>
+    <p class="Effect-Text">Para-6</p>
+    <p class="Effect Text">Para-7</p>
+    <p class="Para Effect Text">Para-8</p>
+</body>
+</html>

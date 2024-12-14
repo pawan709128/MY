@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pattern</title>
+</head>
+
+<body>
+    <form action="" method="get">
+        <input type="text" pattern="colou?r" disabled autofocus readonly>
+        <input type="text" pattern="colo+r" autofocus placeholder="colo+r"> <!--sem litre-->
+        <input type="text" pattern="colo*r" placeholder="colo*r">
+        <input type="text" pattern="colo.r" placeholder="colo.r">
+        <input type="a|b|c|d|" placeholder="a|b|c|d|">
+        <input type="text" pattern="[a,A,!,@,1]" placeholder="[a,A,!,@,1]">
+        <input type="text" pattern="(=.[A-Z])" placeholder="(?=.*[A-Z])">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
+<!-- ? (Zero or one occurrence)
+Definition: Matches the preceding character or group zero or one time.
+Example: colou?r matches both "color" and "colour".
+* (Zero or more occurrences)
+Definition: Matches the preceding character or group zero or more times.
+Example: colou*r matches "color", "colour", or even "colouuuuur".
++ (One or more occurrences)
+Definition: Matches the preceding character or group one or more times.
+Example: colou+r matches "colour" and "colouuur", but not "color".
+. (Dot) (Any single character)
+Definition: Matches any single character, except a newline.
+Example: .at matches "cat", "bat", "2at", but not "at".
+| (Pipe) (Logical OR)
+Definition: Acts as a logical OR, matching either of the expressions on its sides.
+Example: red|green|blue matches "red", "green", or "blue".
+\ (Escape sequence)
+Definition: Escapes a special character (like . or +) to treat it as a literal.
+Example: \+91 matches "+91", and gmail\.com matches "gmail.com".
+[] (Character set)
+Definition: Matches any one character within the set or range specified.
+Example: [a,d,s,4,7,$,&] matches any of these characters.
+[a-d,4-9,A-M] matches any character between 'a' to 'd', '4' to '9', or 'A' to 'M'.
+() (Grouping)
+Definition: Groups characters or expressions together. Used for combining multiple elements or capturing sub-expressions.
+Example: (?=.*[A-Z]) looks for at least one uppercase letter.
+\d (Digit)
+Definition: Matches any digit (0-9).
+Example: \d\d matches "44", "67", "13".
+\D (Non-digit)
+Definition: Matches any non-digit character.
+Example: \d\D matches "3A", "2@", "3b".
+\w (Word character)
+Definition: Matches any word character (A-Z, a-z, 0-9, _).
+Example: \w matches characters like "A", "b", "9", "_".
+\W (Non-word character)
+Definition: Matches any non-word character (i.e., special characters excluding _).
+Example: \d\W\D matches "3$A", "2@b", "2@".
+\s (Whitespace)
+Definition: Matches any whitespace character (spaces, tabs, etc.).
+Example: \d\s\d matches "2 5", "6 8".
+[^] (Negation/exclude)
+Definition: Matches any character except those specified.
+Example: [^a-dA-D4-9] matches anything except 'a' to 'd', 'A' to 'D', and '4' to '9'.
+^ (Starts with)
+Definition: Matches if the string starts with the given pattern.
+Example: ^abc matches strings that start with "abc".
+$ (Ends with)
+Definition: Matches if the string ends with the given pattern.
+Example: abc$ matches strings that end with "abc".
+\i (Ignore case)
+Definition: Ignores case sensitivity in pattern matching.
+Example: chars\i matches "CHARS", "chars", or "Chars". -->

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <section class="container-fluid">
+        <div class="navbar navbar-expand-lg navbar-dark bg-black p-2">
+            <div class="container-fluid">
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <span class="navbar-brand fw-bold fst-italic">Simly.</span>
+            </div>
+            <div class="navbar-collapse collapse" id="menu">
+                <ul class="navbar-nav p-2">
+                    <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Shop</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Pages</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+                </ul>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search..." aria-label="Search">
+                    <button class="btn btn-outline-secondary" type="button">
+                        <div class="bi bi-search"></div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+<!-- Classes:
+    .navbar
+    .navbar-expand-lg | sm
+    .navbar-dark [data-bs-theme=dark] new
+    .navbar-light
+    .navbar-toggler
+    .navbar-toggler-icon
+    .navbar-brand
+    .navbar-nav
+    .navbar-collapse
+    .nav-item
+    .nav-link
+    .nav-text
+    .nav-menu -->

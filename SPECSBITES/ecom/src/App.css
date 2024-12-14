@@ -1,0 +1,109 @@
+/* Header.module.css or Header.css */
+
+.mymenu {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+.mymenu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.mymenu li {
+  display: inline;
+}
+
+.mymenu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.mymenu a:hover {
+  background-color: #555;
+}
+
+
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Card Container */
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 16px;
+  padding: 16px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  float: left;
+  height: 45vh;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Style */
+.card img {
+  width: 50%;
+  height: 27vh;
+  border-bottom: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(240, 212, 212, 0.684);
+}
+
+/* Product Name */
+.pname {
+  font-size: 18px;
+  color: #333;
+  margin: 16px 0;
+  text-decoration: none;
+  display: block;
+}
+
+/* Pricing */
+.pricing {
+  margin-top: 16px;
+}
+
+.pricing h2 {
+  font-size: 20px;
+  color: #888;
+  margin: 0;
+}
+
+.pricing h3 {
+  font-size: 22px;
+  color: #333;
+  margin: 0;
+}
+.pname{
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+a{
+  text-decoration: none;
+}
+.card h3{
+  color: #1d0303c0;
+}

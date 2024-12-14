@@ -1,0 +1,188 @@
+screen:
+
+Targets screens, such as desktops, laptops, tablets, and smartphones.
+Used for typical web page rendering.
+css
+Copy code
+@media screen {
+    /* Styles for screens */
+}
+print:
+
+Targets printed documents or print previews.
+Often used to adjust layout, hide unnecessary content, or improve readability for print.
+css
+Copy code
+@media print {
+    /* Styles for printing */
+}
+all:
+
+Applies to all media types (both screen and print).
+Useful when you want the styles to be universally applied.
+css
+Copy code
+@media all {
+    /* Universal styles for all media */
+}
+speech:
+
+Targets screen readers and other devices that convert text to speech.
+css
+Copy code
+@media speech {
+    /* Styles for screen readers */
+}
+Media Queries Syntax:
+Media queries allow you to apply styles based on certain conditions, such as screen width, orientation, or resolution. They’re commonly used to make websites responsive.
+
+Examples of Common Media Queries:
+1. Basic Media Queries for Screen Sizes (Responsive Design)
+To apply styles for different screen sizes, you can use min-width and max-width.
+css
+Copy code
+/* For screens wider than 768px (Tablets and Desktops) */
+@media screen and (min-width: 768px) {
+    /* Styles for larger screens */
+}
+
+/* For screens smaller than 768px (Phones and small tablets) */
+@media screen and (max-width: 768px) {
+    /* Styles for smaller screens */
+}
+2. Orientation Media Queries
+These media queries detect whether the device is in landscape or portrait orientation.
+css
+Copy code
+/* For devices in landscape orientation */
+@media screen and (orientation: landscape) {
+    /* Styles for landscape orientation */
+}
+
+/* For devices in portrait orientation */
+@media screen and (orientation: portrait) {
+    /* Styles for portrait orientation */
+}
+3. Media Queries for Print
+You can create styles specifically for printing purposes (hide images, adjust font sizes, etc.).
+css
+Copy code
+@media print {
+    /* Hide unnecessary elements in print */
+    .navbar, .footer, button {
+        display: none;
+    }
+
+    /* Adjust font size for printing */
+    body {
+        font-size: 12pt;
+    }
+
+    /* Make text black for better print readability */
+    body {
+        color: black;
+    }
+}
+4. Media Queries for High-Resolution Devices
+These queries target devices with high pixel densities, such as Retina displays.
+css
+Copy code
+@media screen and (-webkit-min-device-pixel-ratio: 2), 
+       screen and (min-resolution: 192dpi) {
+    /* Styles for high-resolution displays */
+}
+Example: Combining screen and print Media Queries:
+Here’s an example of how you might combine media queries for screen and print in a single document.
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Media Queries</title>
+
+    <!-- Styles for Screen (Default) -->
+    <style type="text/css" media="screen">
+        body {
+            background-color: lightblue;
+            color: black;
+            font-size: 16px;
+            margin: 20px;
+        }
+        
+        .content {
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+
+    <!-- Styles for Print -->
+    <style type="text/css" media="print">
+        body {
+            background-color: white;
+            color: black;
+            font-size: 12pt;
+        }
+
+        .content {
+            box-shadow: none;
+        }
+
+        img, button {
+            display: none; /* Hide images and buttons in print */
+        }
+
+        h1 {
+            font-size: 18pt;
+        }
+    </style>
+</head>
+<body>
+   <div class="content">
+       <h1>Responsive Page</h1>
+       <p>This content will look different on screen and when printed.</p>
+       <img src="example.jpg" alt="Example Image">
+       <button onclick="window.print()">Print Page</button>
+   </div>
+</body>
+</html>
+Key Points:
+screen Media Query:
+Applies styles for screen displays.
+Sets the page background to lightblue with a shadow on the content box.
+Includes a print button that will only be visible on the screen.
+print Media Query:
+Changes the background to white when printing.
+Hides images and buttons to avoid unnecessary content on paper.
+Adjusts the font size to make it more readable for print.
+Other Media Features You Can Use:
+min-width / max-width: Targets specific screen sizes.
+min-height / max-height: Targets specific heights.
+min-resolution / max-resolution: Targets specific screen resolutions.
+color: Targets screens that can display colors.
+monochrome: Targets devices with grayscale displays.
+Summary:
+Media Types like screen, print, speech, and all allow you to apply different styles depending on the context in which your content is being used.
+Media Queries allow you to create responsive layouts that adjust based on screen size, resolution, and device orientation.
+Using media queries, you can optimize the user experience across multiple devices (desktops, tablets, smartphones) and contexts (screen vs. print).

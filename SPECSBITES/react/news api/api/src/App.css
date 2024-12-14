@@ -1,0 +1,253 @@
+/* General styling for the main app container */
+.myapp {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container styling for forms and cards */
+.container, .singup, .New_pass {
+  width: 30%;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px -1px 17px 6px #ccc; /* Updated box-shadow for better appearance */
+  margin-top: 20px;
+}
+
+.singup, .New_pass {
+  box-shadow: 11px 5px 17px 6px rgb(60, 59, 55);
+  padding-left: 18px;
+}
+
+.New_pass {
+  padding-left: 15px;
+}
+
+/* Input field styling */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+.Add_news_main textarea,
+.Add_news_main select {
+  padding: 8px;
+  margin-top: 2px;
+  width: 90%;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+/* Submit button styling */
+.aad_news_btn {
+  width: 90px; /* Increased width for better appearance */
+  height: 25px; /* Increased height for better appearance */
+  background-color: green;
+  padding: 5px; /* Increased padding for better appearance */
+  border-radius: 5px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%;
+  text-align: center; /* Ensure the text is centered */
+  display: flex; /* Use flexbox to center the text vertically */
+  align-items: center; /* Center the text vertically */
+  justify-content: center; /* Center the text horizontally */
+  color: white; /* Ensure the text is visible */
+  text-decoration: none; /* Remove underline from the link */
+  border: none; /* Remove border from button */
+  cursor: pointer; /* Show pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+.aad_news_btn:hover {
+  background-color: darkgreen; /* Darker shade on hover */
+}
+
+/* Error message styling */
+.error {
+  color: red;
+  margin-top: 5px;
+}
+
+/* Sidebar styling */
+.Sidebar {
+  width: 20%;
+  height: 100vh;
+  border-right: 1px solid black;
+}
+
+.Sidebar img {
+  width: 75%;
+  margin: 10px auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 9px 0px;
+  display: block;
+}
+
+.Sidebar li {
+  list-style: none;
+  margin-top: 5px;
+  padding: 20px;
+}
+
+.Sidebar a {
+  text-decoration: none;
+  color: rgb(50, 2, 241);
+}
+
+.Sidebar a.active {
+  color: white;
+  background-color: black;
+  padding: 5px 22px;
+  border-radius: 5px;
+  display: inline-block;
+  width: 50%;
+}
+
+/* Dashboard and card styling */
+.mine_MyDashbord {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.main_card {
+  width: 80%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.Dashbord_cart {
+  background-color: #ccccccb9;
+  width: 30%;
+  height: 20vh;
+  text-align: center;
+  margin-top: 5px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 8px 1px #ccc;
+}
+
+/* Add News section styling */
+.AddNews {
+  display: flex;
+}
+
+.Add_news_main {
+  margin-left: 2%;
+  width: 80%;
+  height: 100Vh;
+  padding: 10px;
+}
+
+.Add_news_main select {
+  width: 91.5%;
+}
+
+.form_Add_news_main {
+  margin: 2px;
+  position: relative;
+}
+
+/* Resetting anchor tag styles */
+a {
+  text-decoration: none;
+}
+.MyMunageNews{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}  
+.MyMunageNews_main{
+  width: 80%;
+  height: 100vh;
+  position: relative;
+}
+.MyMunageNews .MyMunageNews_main_btn{
+  width: 90px; /* Increased width for better appearance */
+  height: 25px; /* Increased height for better appearance */
+  background-color: green;
+  padding: 5px; /* Increased padding for better appearance */
+  border-radius: 5px;
+  text-align: center; /* Ensure the text is centered */
+  display: flex; /* Use flexbox to center the text vertically */
+  align-items: cener; /* Center the text vertically */
+  justify-content: center; /* Center the text horizontally */
+  color: white; /* Ensure the text is visible */
+  text-decoration: none; /* Remove underline from the link */
+  border: none; /* Remove border from button */
+  cursor: pointer; /* Show pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition on hover */
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+.MyMunageNews_teble{
+  position: absolute;
+  top: 10%;
+  left: 22%;
+  text-align: center;
+  
+}
+.MyMunageNews_teble {
+  width: 77.5%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+.MyMunageNews_teble thead {
+  background-color: #f2f2f2;
+}
+
+.MyMunageNews_teble th, .MyMunageNews_teble td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.MyMunageNews_teble th {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+}
+
+.MyMunageNews_teble tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.MyMunageNews_teble tr:hover {
+  background-color: #ddd;
+}
+
+.MyMunageNews_teble td {
+  vertical-align: top;
+}
+
+.MyMunageNews_teble th, .MyMunageNews_teble td {
+  text-align: center;
+}
+
+.MyMunageNews_teble th {
+  cursor: pointer;
+}
+.MyMunageNews_teble img{
+  width: 25% ;
+}
+.btn{
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #4CAF50;
+}
+.btndelet{
+  background-color: red;
+}
+i{
+  color: white;
+}
+.btntoggle{
+  background-color: darkgray;
+}
